@@ -189,7 +189,6 @@ timezone: Europe/Istanbul # https://en.wikipedia.org/wiki/List_of_tz_database_ti
 # Plugins (previously gems:)
 plugins:
   - jekyll-last-modified-at
-  - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -199,7 +198,6 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-last-modified-at
-  - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
