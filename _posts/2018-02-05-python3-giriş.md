@@ -4,7 +4,7 @@ last_modified_at:
 categories: 
   - Python
 tags:
-  - Python 3 dersleri 
+  - Python Pep8 
 toc: true
 toc_label: "Python Giriş"
 author_profile: True
