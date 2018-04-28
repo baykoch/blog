@@ -105,6 +105,12 @@ print("Doğru Kullanım  : ",path_escape)
 ```
 {% include figure image_path="/assets/images/python3-data-raw-escape.png" alt="Integer" caption=""%}
 
+### String Conversion Tool
+
+### String Formatting
+
+### String Fonksiyon ve Methodlar
+
 ## Lists
 
 ## Dictionaries
