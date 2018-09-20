@@ -6,7 +6,7 @@ categories:
 tags:
   - Python Pep8 
 toc: true
-toc_label: "Python Giriş"
+toc_label: "Python Giris"
 author_profile: True
 mathjax: true
 ---
