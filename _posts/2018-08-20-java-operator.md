@@ -36,8 +36,8 @@ Operator bir veya daha fazla girdi üzerinde işlem yapan buna mukabil bir sonu�
  Java diline en basit ve en temel operatördür. Yazılımcılar genellikle `eşittir` ile ifade eder. Sağdan sola doğu atama yapılır.  
 
 ```java
-double pi = 3.14;       // Değer ataması
-char turkLira = '₺'; // Değer ataması
+double pi = 3.14;          // Değer ataması
+char turkLira = '₺';       // Değer ataması
 boolean calculate = (x + y) / z && (y + z) / x && (x + z) / y; // Karmaşık ifade 
 Person ali = new Person(); //Refarans ataması
 ```
@@ -61,6 +61,13 @@ result = x++;   // Bir attırma  = 8
 result = x--;   // Bir azaltma  = 6
 ```
 
+Modul işlemi ek olarak ondalik sayılarda işlem yapabilir.
+
+```java
+double kalan = 0.8 % 0.3;
+System.out.println(kalan); // 0.2....7
+```
+
 Attırma `++` ve Azaltma `--` operatörü işlenen değerin öncesinde veya sonrasında kullanılabilir.  Öncesinde kullanılırsa ilk başta cebir işlemi yapılır ve sonra atma işlemi yapılır. Sonrasında kullanılırsa ilk başta atama işlemi yapılır, sonrasında cebir işlemi yapılır.
 
 ```java
@@ -73,7 +80,11 @@ y = --x;      // x = 6 ve y = 6
 z = x--;      // x = 5 ve z = 6  Dikkat! ilk atama işlemi yapıdı.		
 ```
 
-Attırma `++` ve Azaltma `--` operatörü ilgili diğer bir nokta ise aritmetik yüksetme işlemine tabi tutulmazlar.
+
+
+Attırma ++ ve Azaltma -- operatörü ilgili diğer bir nokta ise aritmetik yüksetme işlemine tabi tutulmazlar.
+{: .notice--danger}
+
 
 #### Aritmetik Yükseltme
 
@@ -82,9 +93,9 @@ Aritmetik operatörler yaptıkları işlem sonucunda en az int türünde değer 
 ```java
 short x = 2;
 short y = 3;
-short result = x + y;  // Hata! Operatörler en az int tipinde değer üretir.
-x = -x;      // Hata! X değerini + veya - yapmak dahi en az 'int' değeri üretir. 
-x = +x;      // Hata!
+short result = x + y; // Hata! Operatörler en az int tipinde değer üretir.
+x = -x;     		  // Hata! X değerini + veya - yapmak dahi en az 'int' değeri üretir. 
+x = +x;      		  // Hata!
 short result = (short) x + y;  // x + y sonuçu int tipne olduğu için `cast` yapılmalıdır.
 ```
 
@@ -137,15 +148,15 @@ int y = r.nextInt(99);
 		
 System.out.println("x is "+ x +", y is "+y); // x ve y'nin değeri
 System.out.println("x > y is "+ (x > y));    // x büyük mü y'den?
-System.out.println("x < y is "+ (x < y));	 // x küçük mü y'den?
+System.out.println("x < y is "+ (x < y));    // x küçük mü y'den?
 System.out.println("x >= y is "+ (x >= y));  // x büyük veya eşit mi y'den?
 System.out.println("x <= y is "+ (x <= y));  // x küçük veya eşit mi y'den?
 ```
 `char` tipinde iki karakteri karşılaştırabiliriz. Böyle bir karşılaştırmada her karekterin `unicode` sayısal değeri karşılaştırlır.
 
 ```java
-char a = 'a';	// a'nın unicode değeri = U+0061
-char b = 'b';   // b'nin unicode değeri = U+0062
+char a = 'a'; // a'nın unicode değeri = U+0061
+char b = 'b'; // b'nin unicode değeri = U+0062
 System.out.println("a > b is "+ (a > b)); // false 
 ```
 Diğer kalan 2 operatör **eşit mi?**  `==` ve **farklı mı?** `!=`  operatörüdür. Yukarıda tabloda gösterilen operatörlerin aksine sayısal verilen yanında **referans** ve **boolean** üzerinde de işlem yapabilir. 
@@ -177,8 +188,8 @@ Bir karmaşık tipli nesneler arasında sorgulama yaparsak yanılırız. Çünk�
 //Karmaşık nense referanslarının karşılaştırılması
 Person person1 = new Person("Ali");  // Ali isimli nesne
 Person person2 = new Person("Ali");  // Ali isimli farklı bir nesne
-System.out.println("person1 == person2 is "+ (person1 == person2));  //Değerleri aynı olmasına rağmen faklı nesneleri gösteriyor. 
-System.out.println("person1 != person2 is "+ (person1 != person2));  //true
+System.out.println("person1 == person2 is "+ (person1 == person2));  // Değerleri aynı olmasına rağmen faklı nesneleri gösteriyor. 
+System.out.println("person1 != person2 is "+ (person1 != person2));  // True
 ```
 
 ###  Yeniden Yükleme (*OverLoading*)
@@ -215,10 +226,10 @@ Matıksal operatörler sadece boolean tipler üzerinde işlem yaparlar.
 boolean x = false;
 boolean y = true;
 		
-System.out.println("x & y is "+ (x & y)); //AND işlemi
-System.out.println("x | y is "+ (x | y)); //OR işlemi
-System.out.println("x ^ y is "+ (x ^ y)); //XOR işlemi
-System.out.println("!x is "+ !x + ", !y is "+ !y); //NOT (Zıtlık) işlemi
+System.out.println("x & y is "+ (x & y));          // AND işlemi
+System.out.println("x | y is "+ (x | y));          // OR işlemi
+System.out.println("x ^ y is "+ (x ^ y));          // XOR işlemi
+System.out.println("!x is "+ !x + ", !y is "+ !y); // NOT (Zıtlık) işlemi
 ```
 
 `&&` ve `||` kestirme işlemlerdir. İki değer koşulu sağlamayan veya sağlayan bir değer bulduğunda ikinci değere bakılmaz. `&` ve `|`operatörlerden farklarını anlamak için  aşağıdaki örneği inceleyelim.
@@ -226,14 +237,14 @@ System.out.println("!x is "+ !x + ", !y is "+ !y); //NOT (Zıtlık) işlemi
 ```java
 public static void main(String[] args) {
     //AND ilk değer uymasa bile ikinci değer kontrol ediliyor.
-	if ((numberOne() == 5) & (numberTwo() == 3)) {} // Printed "numberOne","numberTwo"
+	if ((numberOne() == 5) & (numberTwo() == 3)) {}  // Printed "numberOne","numberTwo"
 	// ilk değer uymuyor zaten, ikinci değer kontrol edilmiyor.
-	if ((numberOne() == 5) && (numberTwo() == 3)) {}// Printed "numberOne"
+	if ((numberOne() == 5) && (numberTwo() == 3)) {} // Printed "numberOne"
     
     // OR ilk değer uysa bile ikinci değer kontrol ediliyor.
-	if ((numberOne() == 7) | (numberTwo() == 3)) {} // Printed "numberOne","numberTwo"
+	if ((numberOne() == 7) | (numberTwo() == 3)) {}  // Printed "numberOne","numberTwo"
 	// ilk değer uyduğu için ikinci değer kontrol edilmiyor.
-	if ((numberOne() == 7) || (numberTwo() == 3)) {}// Printed "numberOne"
+	if ((numberOne() == 7) || (numberTwo() == 3)) {} // Printed "numberOne"
     
     
 }
@@ -275,10 +286,10 @@ Kaydırma işlemine geçmeden önce and, or , xor ve~ ile ilgili bir örnek yapa
 ```java
 int x = 43;  // 0b0010 1011
 int y = 25;  // 0b0001 1001
-System.out.println("x & y = "+ (x & y)); //AND işlemi = 9   = 0b0000 1001
-System.out.println("x | y = "+ (x | y)); //OR işlemi  = 59  = 0b0011 1011
-System.out.println("x ^ y = "+ (x | y)); //XOR işlemi = 50  = 0b0011 0010
-System.out.println(" ~x   = "+ (~x));    //"~" işlemi = -44 = 0b1101 0100 (+44 Two's Compiment)
+System.out.println("x & y = "+ (x & y)); // AND işlemi = 9   = 0b0000 1001
+System.out.println("x | y = "+ (x | y)); // OR işlemi  = 59  = 0b0011 1011
+System.out.println("x ^ y = "+ (x | y)); // XOR işlemi = 50  = 0b0011 0010
+System.out.println(" ~x   = "+ (~x));    // "~" işlemi = -44 = 0b1101 0100 (+44 Two's Compiment)
 ```
 
 `~x` neden `-44` olduğunu acıklayalım.
@@ -357,4 +368,93 @@ Person ali = new Person();
 boolean typeTest = (ali instanceof Person); // ali nesnesi 'Person' tipinden mi?
 System.out.println(typeTest);               // true
 ```
+### Operatörlerde Öncelik (*Precedence of Java Operators*)
+Operatörlerde öncelik, bulunduğu kategori ve değerlendirme sırası `Associativity` göre belirlenir.
+
+```mathematica
+x = 7 + 1 / 2        = (7 + (1 / 2)) Öncelik: /,* opetörleri +,- operatöründen önce işlenir.
+x = y = z = w        = x = (y = (z = w)) Associativity: Atama operatörü soldan sağa doğru işlenir.
+x = y++              = (x = y) then y++  Associativity: ++, -- operatörleri sağdan sola değerlendirildiği için ilk atama yapılıyor.
+x = ++y              = (y++) then (x = y)
+x = (y < z) ? 2 : 4  = Associativity: Sağdan sola doğru ifade değerlendiriliyor.
+```
+
+
+
+|        Katagori         |               Operatör               | Değerlendirme Sırası |
+| :---------------------: | :----------------------------------: | :------------------: |
+|         Postfix         |        () [] . (dot operator)        |     Soldan Sağa      |
+|          Unary          |            ++  - -  !  ~             |   **Sağdan Sola**    |
+|     Multiplicative      |                 * /                  |     Soldan Sağa      |
+|        Additive         |                 + -                  |     Soldan Sağa      |
+|          Shift          |            \>>   >>>  <<             |     Soldan Sağa      |
+|       Relational        |              \ >=   <=               |     Soldan Sağa      |
+|        Equality         |                ==  !=                |     Soldan Sağa      |
+|       Bitwise AND       |                  &                   |     Soldan Sağa      |
+|       Bitwise XOR       |                  ^                   |     Soldan Sağa      |
+|       Bitwise OR        |                  \|                  |     Soldan Sağa      |
+|       Logical AND       |                  &&                  |     Soldan Sağa      |
+|       Logical OR        |                 \|\|                 |     Soldan Sağa      |
+|       Conditional       |                 ? :                  |   **Sağdan Sola**    |
+| Assignment and Compound | =  (+= -= *= /= %= >>= <<= &= ^= \|) |   **Sağdan Sola**    |
+
+Dikkat tabloya dikkat edilirse tekli `unary`, şartlı `Conditional`  ve birleşik `Compound` (yukarıda kunusu anlatıldı.) hariç diğer tüm operatörler soldan sağa doğru değerlendirilir.
+
+Aşağıdaki kod parçaları her ne kadar mantıklı olmasa da öğrenmek ve örnek teşkil etmesi için maruz görülmeli.
+
+```java
+public static void main(String[] args) {
+	int y = 16;
+	int x;
+	x = ( y++ / operatör.numberOne() << 1 + 2 == --y  ) ? 47 : 53;
+	System.out.println(x);    
+}
+
+public  int numberOne() {
+    return 8;
+}
+```
+
+
+
+`x = ( y++ / operatör.numberOne() << 1 + 2 == --y  ) ? 47 : 53;` adım adım inceleyim.
+
+1. İlk  dikkat edilecek nokta x'nin değeri şartlı (*Conditional*) ifadeye göre belirlenecek olmasıdır. (Sağdaki ifade doğru ise 47, yanlış ise  53) 
+2. `.` notasyonu ilk işlenir `operatör.numberOne() = 8 `.  ***(y++ / 8 << 1 + 2 == --y )*** 
+3.  Sonra tabloya göre 16 / 8 = 2 .`y++` ifadesi sağdan işlendiği için attırılmadı.  ***(2  << 1 + 2 == --y )*** 
+4.  Sonra `1 + 2 =3`.  ***(2  << 3 == --y )*** 
+5. Sonra `2 << 3`=16 .  ***( 16 == --y )***
+6. Dikkat!  `y++` işleniyor. `y = 17`. ***( 17 == --y )***
+7.  Sağdaki işleme geçildi.`--y = 16`. ***( 16  == 16 )***
+8.  İfade doğru çıktığı için **x'**in değeri `= 47` olur.
+
+Diğer bir örnek.
+
+```java
+public static void main(String[] args) {
+	int y = 3;
+	int x = 2;
+	int result = operatör.add(++x , x, y = 4 , y++); //add (3,3,4,4) geçilir. Add İşlemden sonra y değeri bir attırılır.
+	System.out.println("x + y + z + w =" + result);  // 14
+	System.out.println("x = " + x);                  // 3
+	System.out.println("y = " + y);                  // 5 
+
+}
+
+public int add(int x, int y, int z, int w) {
+	return x + y + z + w;
+
+}
+```
+
+ Diğer bir anlaşılmakta güçlük çekilen `+` operatörünü `overload` olmasından kaynaklanan işlem önceliğidir. Aşağıdaki kodda ilk satırda soldan başladığı için ve `+`'nın solunda string olduğundan string birleştirme yapar.  
+
+```java
+System.out.println("TDK" + 2 + 3 ); // TDK23
+System.out.println(2 + 3 + "TDK");  // 5TDK
+```
+
+
+
+ 
 
