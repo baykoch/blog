@@ -105,7 +105,7 @@ int lastPre = 52_;
 
 Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade  edilir. IEEE 754 bazı sayı göstermede bazı kısıtlamalara sahiptir. Yani `0` ve `2^−126` arasındaki sayılar gösterilemez. Bu aralıkta yapılan işlemlerde hata alınabilir. 
 
-```
+```java
 double ieee = 0.1 * 3 - 0.3;
 System.out.println(ieee); // işlemin sonucu eden 0 değil.
 ```
@@ -235,7 +235,7 @@ Sınıf değişkenleri üretilen nesneye bağlı değildir. Üretilen tüm nesne
 public class Person {
     //Sınıf değişkeni
 	public static int countPerson; // Üretilen toplam nesne sayısı
-	//Nesne değişleri
+	//Nesne değişkenleri
 	private String name;          
 	private String surname;
 	private String adress;
