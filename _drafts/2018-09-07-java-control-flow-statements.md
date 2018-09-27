@@ -16,7 +16,7 @@ mathjax: false
 
 Java doğal yapısında olarak *döngü ifaderi* ve *karar verme ifadeleri* vardı. Bununların yanında `break` gibi *dallanma ifadeleri* bulunur.
 
-- Java Akış Kontrolü (**Control Flow Statements**)
+- Java Akış Kontrolü (*Control Flow Statements*)
   1. Döngü ifadeleri (*the looping statements*)
      - for ve for each (*ilerde bahsedilecek*)
      - while
@@ -27,13 +27,11 @@ Java doğal yapısında olarak *döngü ifaderi* ve *karar verme ifadeleri* vard
   3. Dallanma ifadeleri (*the branching statements*)
      - break, continue, return
 
-### Döngü ifadeleri (*the looping statements*)
+## Döngü ifadeleri (*the looping statements*)
 
-#### While
+### While
 
-`X` kontrol ifadesi doğru olduğu sürece `Y` bölümü
-
- çalışır.
+`X` kontrol ifadesi doğru olduğu sürece `Y` bölümü çalışır.
 
 ```mathematica
 while ( X ) {    
@@ -57,7 +55,7 @@ public static void main(String[] args) {
 
 
 
-#### do-while
+### do-while
 
 `do-while` ifadesini `while` farkı ***an az bir kez*** çalışmasıdır. `X` kontrol ifadesi doğru olduğu sürece `Y` bölümü çalışır. `while` ifadesinin sonunda `;` **noktalı virgul** koyulmalıdır.
 
@@ -83,9 +81,7 @@ public static void main(String[] args) {
 }
 ```
 
-
-
-#### for
+### for
 
 `for` ifadeleri diğer döngü ifadelerin tek yönde kontrol yapısı aksine başlangıc ve bitişle sınırlamaya zorlayan yapılardır.
 
@@ -145,9 +141,9 @@ public static void main(String[] args) {
    }
    ```
 
-### Karar İfadeleri (*the decision-making statements*) 
+## Karar İfadeleri (*the decision-making statements*) 
 
-#### if or if-else
+### if or if-else
 
 `if` bir ifadeye bağlı karar veren, `if-else`yapısı ile dallanma yapabilien yapılardır.
 
@@ -203,5 +199,125 @@ Bazı özellikler:
    ```
 
 
-#### Switch
+### Switch
+
+`Switch` yapısı `if-else if` iafeldrini daha toplu ve hızlı olan yapılarıdır. Kontrol yapısında değere göre dallanma yapılır. 'case' kısımlarında **sabit** olmalıdır. `switch` yapısının desteklediği tipler: *byte, short, char, and int , enum , string sınıfı ve ilkel tiperin sarmanmış -wrap- sınıfları (Character, Byte, Short, and Integer)*
+
+**Not:** *Wrap* sınıfları ve *string* sınıfı hariç karmaşık tipleri desteklemez. Ayrıca `boolean ` tiplerini de desteklemez.
+
+```java
+int day = 2;
+switch (day) {
+	case 1:
+		System.out.println("Monday"); break;
+	case 2:
+		System.out.println("Tuesday"); break;
+	case 3:
+		System.out.println("Wednesday"); break;
+	case 4:
+		System.out.println("Thursday"); break;
+	case 5:
+		System.out.println("Friday"); break;
+	case 6:
+		System.out.println("Saturday"); break;
+	case 7:
+		System.out.println("Sunday"); break;
+	default:
+		System.out.println("Invalid day"); break;
+}
+```
+
+`Switch` yapısında dikkat edilmesi gereken durumlar:
+
+- `case`  hiçbir değer aynı olamaz.
+
+- `break` yazılmaz ise `break` buluncaya kadar çalısır.
+
+  ```java
+  String currency = "TL";
+  switch (currency) {
+  	case "TL":
+  		System.out.println('₺');    // Break konulmadığı için TL ve Euro ikiside yazılır.
+  	case "Euro":
+  		System.out.println('£');
+  		break;
+  	case "Dolar":
+  		System.out.println('$'); break;
+  }
+  ```
+
+- `default` hiçbir durum çalışmadığında çalısan kısımdır. Yeri önemli değildir; başta, ortada veya sonda bulunabilir. Son olarak zorunlu değildir.
+- `case` kesinlikle sabit olmalıdır. (Dikkat ! *final* ile tanımlanmış tip olabilir.) 
+
+## Dallanma ifadeleri (*the branching statements*)
+
+### break, continue
+
+`break` bulunduğu bloğun çalışmasını sonladırırken, `continue` ise sade bulunduğu adımın çalışmasını sonlandırır.
+
+`break` kullanılabildiği akış yapıları: `for`,`while`,`do-while`ve `switch`
+
+`continue` kullanılabildiği akış yapıları: `for`,`while` ve `do-while`
+
+```java
+// 0 ile 20 arasındaki çift sayılar yazdıralım.
+for (int i = 0; i <= 20; i += 2) {
+
+	if (i == 4) {          
+		continue;         // Sadece 4. adım kırıldığından 4 basılmayacak. 
+	} else if (i == 10) { 
+		break;            // 10. adımda blok kırıldığından 10 ile 20 arasındaki çift sayılar basılmayacak.
+	}
+	System.out.println("i = " + i); // i = 0 2 6 8 
+}
+```
+
+### break ve continue etiket (*label*) ile kullanımı
+
+`break`işararetlemiş  blogun kırılmasına  sağlar. Aşağıdaki kod parçasında birden fazla `3` olamasına rağmen ilk bulunduğu zaman aramaı bırakacaktır. `f:` kaldırıp sadece `break` kalsaydı bulmaya devam edecekti.
+
+```java
+int[][] dizi = { { 0, 1 }, { 3, 3 }, { 4, 3 } };
+int find = 3;
+f: for (int i = 0; i < dizi.length; i++) {  // İlk sayı bulunduğunda kırılacak.
+
+	for (int j = 0; j < 2; j++) {
+                 
+		if ( dizi[i][j] == find ) {
+			System.out.println((i) + ".satır " + (j) + ".sütünda bulundu!");
+			break f;      // Dış döngüyü sonlandırır. 
+            //continue f; // Sadece iç döngüyü sonlandırır.
+		}
+				
+	}
+}
+```
+
+Yukarıdaki kod parcasında `break` yerine `continue` yazılsaydı, sadece bulduğu satırı atlayacaktı. Yani,  ilk değeri 2. satırda `{ 3, 3 }` bulacak 2.satırın 2. sütününe bakmadan diğer `{ 4, 3 }` satırına atlayacaktı.
+
+### return
+
+`return` bir metotdan çağrıldığı yere dönmeyi sağlar.  Metot türüne göre bir değer geri dönderebilir veya döndermez. Eğer bir değer geri döndermiyorsa kullanılmasına zorunlu olmayıp isteğe bağlı sade halinde `return;` kullanılabilir. 
+
+```java
+public static void main(String[] args) {
+      methodOne();
+      int result = methodTwo(3);
+      System.out.println(result);
+}
+public static void methodOne() {
+		System.out.println("Değer döndürmeyen metot");
+		// return 2; !!! Hata 
+		return;    //İsteğe bağlı
+}
+public static int methodTwo(int i) {
+		return i*i; 	// Sayının karesi 
+		// i+=2;        // Ölü kod return'den sonra çalışmaz!!!
+}
+```
+
+### goto
+
+Java'da `goto` anahtar kelimesi bulunmasına rağmen  sakıncalı görüldüğünden kullanılmaz.
+
 
