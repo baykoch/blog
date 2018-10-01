@@ -1,7 +1,7 @@
 ---
 title: "Java İsimlendirme ve Şekil Rehberi (Style Guide)"
 last_modified_at:
-categories: 
+categories:
   - java
 tags:
   - java style guide
@@ -32,24 +32,24 @@ Java Dosyası aşağıda belirtilen sıra izlenmeli:
 ```java
 /**
  * Sınıfİsmi (Classname)
- * 
+ *
  * Versiyonu  (Version information)
  *
  * Tarih (Date)
- * 
+ *
  * Telif uyarısı (Copyright notice)
  */
 ```
 
-2. Paket ifadeleri: Paketler isimleri küçük harfle yazılmalı kelimeler arasına nokta konulmalıdır. Paket isimleri arasına tire (*hypens*) ve alt-tire (*underscores*) konmaz. 
+2. Paket ifadeleri: Paketler isimleri küçük harfle yazılmalı kelimeler arasına nokta konulmalıdır. Paket isimleri arasına tire (*hypens*) ve alt-tire (*underscores*) konmaz.
 3. Import ifadeleri: İmport kullanılırken sadece ilgili kütüphane import edilmedir.Kütüpheneni hepsi ile ilgili moduleun import edilmesi arasında bir performans farkı yoktur.
 
 ```java
-pacgake com.baykoch.javase.b2  //Doğru kullanım
-pacgake com.baykoch.javase.b_2 //Yanlış kullanım
+pacgake com.baykoch.javase.b2  // Doğru kullanım
+pacgake com.baykoch.javase.b_2 // Yanlış kullanım
 
-import java.util.*;           //Tavisye edilmez
-import java.util.HashMap;     //Okunanilirk acısında iyi
+import java.util.*;           // Tavisye edilmez
+import java.util.HashMap;     // Okunanilirk acısında iyi
 ```
 
 4. Class ve Interface Bölümü
@@ -69,7 +69,7 @@ import java.util.HashMap;     //Okunanilirk acısında iyi
  * @(#)Circle.java        v1.00
  *
  * 15/08/2018
- * 
+ *
  * This file is part of Java Dersleri.
  *
  * Java Dersleri is free software: you can redistribute it and/or modify
@@ -90,53 +90,53 @@ import java.util.HashMap;     //Okunanilirk acısında iyi
 package com.bayckoh.javase.b1;
 
 /**
- * 
- * Basit geomoetride daire sınıfının durumlarını ve bazı davranışlarını
+ *
+ * Basit geometride daire sınıfının durumlarını ve bazı davranışlarını
  * tanımlar.
- * 
+ *
  * @author Muhammed K.
  * @version 1.00
  * @since 1.9
  */
 public class Circle {
 
-	/**
-	 * Dairenin yarıcapını tanımlar
-	 */
-	private double radius;
+    /**
+     * Dairenin yarıçapını tanımlar
+     */
+    private double radius;
 
-	/**
-	 * Kurucu metot(Default constructor)
-	 */
-	public Circle() {
+    /**
+     * Kurucu metot(Default constructor)
+     */
+    public Circle() {
 
-	}
+    }
 
-	public double getRadius() {
-		return radius;
-	}
+    public double getRadius() {
+        return radius;
+    }
 
-	public void setRadius(double radius) {
-		this.radius = radius;
-	}
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
 
-	/**
-	 * Bu metot daireni alanı hesaplar
-	 * 
-	 * @return dairenin alanını
-	 */
-	public double calculateArea() {
-		return Math.PI * radius * radius;
-	}
+    /**
+     * Bu metot daireni alanı hesaplar
+     *
+     * @return dairenin alanını
+     */
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
 
-	/**
-	 * Bu metot daireni cevresini hesaplar
-	 * 
-	 * @return dairenin çevresi
-	 */
-	public double calculatecircumference() {
-		return 2 * Math.PI * radius;
-	}
+    /**
+     * Bu metot dairenin çevresini hesaplar
+     *
+     * @return dairenin çevresi
+     */
+    public double calculatecircumference() {
+        return 2 * Math.PI * radius;
+    }
 
 }
 ```
@@ -144,15 +144,15 @@ public class Circle {
 
 ### Classes & Interfaces
 
-Sınıflar ve arayüzler UpperCamelCase kuralanına göre, ilk harf büyük ve kelimeler arası geçişte ilk harf büyük yazılır. Örnek: İşletimSistemi.
+Sınıflar ve arayüzler `UpperCamelCase` kurallarına göre, ilk harf büyük ve kelimeler arası geçişte ilk harf büyük yazılır. Örnek: İşletimSistemi.
 
 ###  Methods
 
-Metotlar lowerCamelCase kuralanına göre, ilk harf küçük  ve kelimeler arası geçişte ilk harf büyük yazılır. 
+Metotlar `lowerCamelCase` kurallarına göre, ilk harf küçük  ve kelimeler arası geçişte ilk harf büyük yazılır.
 
 ```java
 public double calculateArea() {
-		return Math.PI * radius * radius;
+        return Math.PI * radius * radius;
 }
 ```
 
@@ -164,7 +164,7 @@ Veri tipleri ve parametreler “lowerCamelCase” kuralına göre yazılır.
    > karadenizİklimi  //Hatalı
    > karadeniziklimi, karadeniz_iklimi vb.leri  //Doğru
 
-2. Değişken isimlerinde kısaltma kullanımı önerilmez ama bloglar içinde veya tek kullanımlık geçici durumlarda kullanılabilir. Bu şekilde kullanımlarda, hep aynı biçimde kısatmaları  kullanımına dikkat et. Bazı yaygın kısatmalar: 
+2. Değişken isimlerinde kısaltma kullanımı önerilmez ama bloglar içinde veya tek kullanımlık geçici durumlarda kullanılabilir. Bu şekilde kullanımlarda, hep aynı biçimde kısaltmaları  kullanımına dikkat et. Bazı yaygın kısaltmalar:
    - Döngülerde I,j
    - Steam için str
    - input için in
@@ -174,37 +174,38 @@ Veri tipleri ve parametreler “lowerCamelCase” kuralına göre yazılır.
 3. Kısaltılmış kelimelerin  harfleri tamamını büyük harfle yazma.
 
    > XMLHTTPRequest //Hatalı
-   > 
+   >
    > XmlHttpRequest //Tavsiye
 
 4. Değişken çoğul ifadeleri çağrıştırıyorsa  kelimeyi çogul yap.
-   > systemProperties //Good 
-   > 
+   > systemProperties //Good
+   >
    > systemProperty   //Bad
 
 5. Boolean değişkenlerini sanki soru soruyormuş gibi yaz. Soru ekini yazmadan oluştur.
-   > HatMeşgulmu  //:( 
+   > HatMeşgulmu  //:(
    > HatMeşgul    //:)
-   > 
-   > iscarStopped //:( 
-   > carStopped   //:) 
+   >
+   > iscarStopped //:(
+   > carStopped   //:)
 
 6. Statik değişkenler isimlendirme tamamı büyük ve kelimeler arası alt-tire kullanılır.
+
    > public static final int PI_NUMBER = 3.14;
 
-7. Değişken tanımı yapılırken tek satırda yazma. Tip ve tanımlayıcılar arasında bir boşluk bırakabilir ya da aynı hızaya çekebilirsin.
+7. Değişken tanımı yapılırken tek satırda yazma. Tip ve tanımlayıcılar arasında bir boşluk bırakabilir ya da aynı hizaya çekebilirsin.
 
    ```java
-   int level;            //Tek satırda tımlama ve arasında 1 boşluk
+   int level;            // Tek satırda tanımlama ve arasında 1 boşluk
    int size;       
-   int level, size;      //Hatalı
+   int level, size;      // Hatalı
     
-   int     level;        // Aynı seviyede hızalama için boşluk kullanımı
+   int     level;        // Aynı seviyede hizalama için boşluk kullanımı
    int     size;                    
    Object  currentEntry;
    ```
 
-8. Global değişkenler ile yerel değişkenleri aynı isimde **tanımlamamaya** dikkat et.
+8. Global değişkenler ile yerel değişkenleri aynı isimde olmamalıdır.
 
 9. Değişkenlerin ilk değerleri, bazı işlemlerden sonra atama yapılması gereken durumlar hariç, tanımlanan yerde ilk değer ataması yapmaya dikkat et.
 
@@ -212,24 +213,24 @@ Veri tipleri ve parametreler “lowerCamelCase” kuralına göre yazılır.
 
 ### Indentation
 
-İndentation Türkçede girinti çıkıntı gibi anlamlara gelmektedir.  Pratikte bir düzen veya tertip sağlamak için uygulanan kurallar bütünü diyebiliriz. Örneğin yeni bir paragrafa geçtiğimizi belirtmek için satır başı boşluk bırakmak gibi.
+İndentation Türkçede girinti çıkıntı gibi anlamlara gelmektedir.  Pratikte bir düzen ve tertip sağlamak için uygulanan kurallar bütünü diyebiliriz. Örneğin yeni bir paragrafa geçtiğimizi belirtmek için satır başı boşluk bırakmak gibi.
 
-#### Satır Uzunlukarı (Line Length)
+#### Satır Uzunlukları (Line Length)
 
-Okunabirliği zorlaştırdığı ve karışıklığa sebebiyet verdiği için  satırları çok uzun tutulması tavsiye edilmez. Bir satırın maksimumun uzunluğu 80 karakter olmalıdır.
+Okunabilirliği zorlaştırdığı ve karışıklığa sebebiyet verdiği için  satırları çok uzun tutulması tavsiye edilmez. Bir satırın maksimumun uzunluğu 80 karakter olmalıdır.
 
 #### Satır Sarmalama (Wrapping Lines)
 
-İlk başta eğer satır 80 karakterdn fazla ise yeni satıra gecilecekse hangi kurallara uymalıyız onlara  bir göz atalım.
+İlk başta eğer satır 80 karakterden fazla ise yeni satıra gidilecekse hangi kurallara uymalıyız onlara  bir göz atalım.
 
-- Yeni satır virgulden sonra veya oparatörden önce yapılmalıdır.
-- Metot çagrılarında birden fazla ifade içeriyor ve bu ifadeler arasında yüksel-düşük seviye ilişki var ise yüksek olanı tercih et.
+- Yeni satır virgülden sonra veya operatörden önce yapılmalıdır.
+- Metot çağrılarında birden fazla ifade içeriyor ve bu ifadeler arasında yüksel-düşük seviye ilişki var ise yüksek olanı tercih et.
 
 ```java
 someMethod(longExpression1, longExpression2, longExpression3, // Virgunden sonra kesme
-         longExpression4, longExpression5);   // 8 boşluk 
+         longExpression4, longExpression5);   // 8 boşluk
          
-var = someMethod1(longExpression1,  // Yüksek seviyeden kesme yapıldı
+var = someMethod1(longExpression1, 			 // Yüksek seviyeden kesme yapıldı
               someMethod2(longExpression2,   // 8 boşluk bırakıldı
                      longExpression3));      // 8 boşluk bırakıldı
 
@@ -242,13 +243,13 @@ longName1 = longName2 * (longName3 + longName4 - longName5)
            + 4 * longname6; // Doğru
 
 longName1 = longName2 * (longName3 + longName4
-                       - longName5) + 4 * longname6; // Hatalı 
+                       - longName5) + 4 * longname6; // Hatalı
 ```
-- Metot arayüzlerilerinde yeni satır geçildiğinde gelenksel girinti kullan
+- Metot arayüzlerinde yeni satıra geçildiğinde geleneksel girinti kullan
 
 ```java
 someMethod(int anArg, Object anotherArg, String yetAnotherArg,
-           Object andStillAnother) {        //Aynı satır hizası
+           Object andStillAnother) {        // Aynı satır hizası
       ...
 }
 ```
@@ -257,34 +258,34 @@ someMethod(int anArg, Object anotherArg, String yetAnotherArg,
 
 ```java
 private static synchronized horkingLongMethodName(int anArg,
-        Object anotherArg, String yetAnotherArg, //Satır başı 8 tane boşluk
-        Object andStillAnother) {  //Satır başı 8 tane boşluk
+        Object anotherArg, String yetAnotherArg, // Satır başı 8 tane boşluk
+        Object andStillAnother) {  				 // Satır başı 8 tane boşluk
        ...
 }
 ```
 
-- if ifadelerinde 4 tane boşluk yerin 8 tane boşluk kullanımını önerilir.
+- if ifadelerinde 4 tane boşluk yerin 8 tane boşluk kullanımını öneriyor.
 
 ```java
-//Hatalı
+// Hatalı
 if ((condition1 && condition2)
     || (condition3 && condition4)
     ||!(condition5 && condition6)) {
     doSomethingAboutIt();            
-} 
+}
 
-//Doğru 
+// Doğru
 if ((condition1 && condition2)
         || (condition3 && condition4)
         ||!(condition5 && condition6)) {
     doSomethingAboutIt();
-} 
+}
 
-//Bu şekilde de kullanılabilir.
+// Bu şekilde de kullanılabilir.
 if ((condition1 && condition2) || (condition3 && condition4)
         ||!(condition5 && condition6)) {
     doSomethingAboutIt();
-} 
+}
 ```
 
 - Ternary ifadeleri için aşağıda belirtilen 3 durumda kullanılabilir.
@@ -296,7 +297,7 @@ alpha = (aLongBooleanExpression) ? beta
                                  : gamma;  
 
 alpha = (aLongBooleanExpression)
-        ? beta 
+        ? beta
         : gamma;  
 ```
 
@@ -304,7 +305,7 @@ alpha = (aLongBooleanExpression)
 
 ```java
 class MyClass{
-    public static void main( String[] args ){  //4 tane boşluk
+    public static void main( String[] args ){  // 4 tane boşluk
         ...
     }
 }
@@ -316,9 +317,10 @@ class MyClass{
 class MyClass{
     public static void aVeryLongMethod(new MyClassThatDoesSomething myClassThatDoesSomething, // 4 tane boşluk
             new MyOtherClassThatDoesSomething myOtherClassThatDoesSomething, // 8 tane boşluk
-            int aVeryLongIdentifer) 
+            int aVeryLongIdentifer)
         ...
     }
 }
 ```
+
 

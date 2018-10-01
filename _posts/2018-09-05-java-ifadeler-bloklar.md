@@ -1,7 +1,7 @@
 ---
 title: "Java İfade,Cümle ve Blok Kavramları "
 last_modified_at:
-categories: 
+categories:
   - java
 tags:
   - java expression
@@ -22,7 +22,7 @@ mathjax: true
   ```mathematica
   5 / 2    
   7 % 3
-  pi + (4 * 2) 
+  pi + (4 * 2)
   ```
 
 - Atama işlemi ifadelerine örnekler.
@@ -47,12 +47,12 @@ mathjax: true
    ```
 
 
-Dikkat edilmesi gereken diğer önemli nokta ise ifadelerin değerleri çalışma zamanında `run-time` belirlenir. 
+Dikkat edilmesi gereken diğer önemli nokta ise ifadelerin değerleri çalışma zamanında `run-time` belirlenir.
 
 ```java
-int maxInt = 2_147_483_647; //int alabileceği max değer ataması.
-maxInt = 2_147_483_648;     //Hata! out of range
-maxInt = maxInt +1;         //Run time değer belilendiğinde hata vermeyecektir.
+int maxInt = 2_147_483_647; // int alabileceği max değer ataması.
+maxInt = 2_147_483_648;     // Hata! out of range
+maxInt = maxInt +1;         // Çalışma zamanı değer belirlendiğinden hata vermeyecektir.
 ```
 
  Yukarıdaki kod parçasında:  
@@ -61,12 +61,12 @@ maxInt = maxInt +1;         //Run time değer belilendiğinde hata vermeyecektir
 
 - İkinci satırda ise maksimum değeri bir fazlasının  atamasına hata verecektir.  
 
-- Üçünü satırda hata vermeyecektir. Çünkü ifadeler çalışma zamanında belirlendiğinden sonucun hangi değer olduğunu Java bilemiyor. Bu duruma dikkat edilmez ise bazen ölü bölge oluşabilir.
+- Üçünü satırda hata vermeyecektir. Çünkü ifadeler çalışma zamanında belirlendiğinden sonucun hangi değer olduğunu Java bilemiyor. Bu duruma dikkat edilmezse bazen ölü bölge oluşabilir.
 
   ```java
   int test = 3;
   if (test > 8) {    //Java uyarmıyor.
-  	 //Ölü bölge     
+       //Ölü bölge     
   }
   ```
 
@@ -78,12 +78,12 @@ maxInt = maxInt +1;         //Run time değer belilendiğinde hata vermeyecektir
 
   ```java
   counter = 2;                // tanımlama cümlesi
-  counter++;                  // matemetiksel cümle
+  counter++;                  // matematiksel cümle
   System.out.println(counter) // metot çağrı cümlesi
   Person ali = new Person();  // nesne oluşturma ifadesi
   ```
 
-- Akış kontrol cümleri -Control Flow Statment-
+- Akış kontrol cümleleri -Control Flow Statement-
 
   - decision-making statements : `if-then`, `if-then-else` and`switch`
   - the looping statements :`for`, `while` and`do-while`
@@ -92,17 +92,17 @@ maxInt = maxInt +1;         //Run time değer belilendiğinde hata vermeyecektir
 
 ### Bloklar
 
-Blok sıfır veya daha fazla cümleden oluşan sınırları süslü parantezle belirtilmiş alanlardır.  Blok çeşitleri aşağıda sıralanmıştır. İlerki derslerde bahsedecektir.
+Blok sıfır veya daha fazla cümleden oluşan sınırları süslü parantezle belirtilmiş alanlardır.  Blok çeşitleri aşağıda sıralanmıştır. İleriki derslerde bahsedecektir.
 
 - Değişken tanımlama *(Declaration block)*
 
-- İlk değer atama *(Initialization block)*
+- İlk değer atama *(İnitialization block)*
 
 - Karar verme *(decision-making blocks)* `if-then`, `if-then-else` and`switch`
 
 - Döngü blokları *(looping blocks)* `for`, `while` and`do-while`
 
-- Metot blokları 
+- Metot blokları
 
 - Sınıf tanımlama: Local class, nested class and  anonymous class
 

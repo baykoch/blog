@@ -1,7 +1,7 @@
 ---
 title: "Java Veri Tipleri"
 last_modified_at:
-categories: 
+categories:
   - java
 tags:
   - java data type
@@ -12,64 +12,64 @@ author_profile: True
 mathjax: true
 ---
 
-Aslında bilgisayarın temel mantığı basittir. Elektrik devrelerindeki reaksiyonlara göre  var `1` yok `0` olarak belirlenir. Bu sıfır ve birler yana yana gelerek 8 bit yani bizim karakter diye adlandırdığımız sembolleri oluştururlar. Bu karakterler ilk zmanlar ASCII  adı altında tanımlanmişti. Örneğin küçük harf `a` ikli sistemde ` b110 0001` ile ifade edilir. Bilimsel gelişmeler ile  bazı semboller,  ülkelerin doğal konuşma dillerine özgü harfler veya resmi para sembolleri bilgisayar dünyasına aktarılması ile ASCII ihtiyacı karşılayamaz hale gelmiştir. En son **unicode** -16 bit-  standart kodlama sistemi  geliştirmiştir.  Veri tipleri bu karakterleri kullanmak için kullanılan değerlerdir. Mesela **int**  -32 bit uzunluğunda- tam sayıları ifade edebilir.
+Aslında bilgisayarın temel mantığı basittir. Elektrik devrelerindeki reaksiyonlara göre  var `1` yok `0` olarak belirlenir. Bu sıfır ve birler yana yana gelerek 8 bit yani bizim karakter diye adlandırdığımız sembolleri oluştururlar. Bu karakterler ilk zamanlar ASCII  adı altında tanımlanmıştı. Örneğin küçük harf `a` ikili sistemde ` b110 0001` ile ifade edilir. Bilimsel gelişmeler ile  bazı semboller,  ülkelerin doğal konuşma dillerine özgü harfler veya resmi para sembolleri bilgisayar dünyasına aktarılması ile ASCII ihtiyacı karşılayamaz hale gelmiştir. En son **unicode** -16 bit-  standart kodlama sistemi  geliştirmiştir.  Veri tipleri bu karakterleri kullanmak için kullanılan değerlerdir. Mesela **int**  -32 bit uzunluğunda- tam sayıları ifade edebilir.
 
-Java değişkenlerin tiplerinin belirtilmesi zorunludur. Yani Python diline munhasır şekilde bir değişken oluşturup, ilk başta sayı atayıp sonra metin atayamayız. Java'da veri tipleri 3 başlık altında toplanır:
+Java değişkenlerin tiplerinin belirtilmesi zorunludur. Yani Python diline munhasır şekilde bir değişken oluşturup, ilk başta sayı atayıp sonra metin atamayız. Java'da veri tipleri 3 başlık altında toplanır:
 
 {% include figure image_path="/assets/images/java-type.png" alt="data type" caption=""%}
 
-## Basit Veri Yapıları 
-Basit tipler karmişk olmayan `class` veya `interface` türetilmeyen tiplerdir. Atomik yapıda, başka değişkenlerden türetilmemişlerdir. Bellek kullanımı  azdır. Array gibi yapılar ile birlikte kullanıldıklarında referans yani karmaşık tiplere göre daha hızlıdırlar. Sekiz adet olan basit tiplerin karmaşık tipleri vardır. Bunlara sarmalanmiş yapılar olarak bilinir. Mesala sık kullanılan `**String**` tipi bir karmaşık tipdir. `String` `char` basit tipini üzerine inşa edilmiştir.
+## Basit Veri Yapıları
+Basit tipler karmaşık olmayan `class and interface`’lerden türetilmeyen tiplerdir. Atomik yapıda, başka değişkenlerden türetilmemiştir. Bellek kullanımı  azdır. Array gibi yapılar ile birlikte kullanıldıklarında referans yani karmaşık tiplere göre daha hızlıdırlar. Sekiz adet olan basit tiplerin karmaşık tipleri vardır. Bunlara sarmalanmış yapılar olarak bilinir. Mesela sık kullanılan `**String**` tipi bir karmaşık tiptir. `String` `char` basit tipini üzerine inşa edilmiştir.
 
-**Not:** 
+**Not:**
 ​    Karmaşık tiplerde değerin adresini tutarken, Basit tiplerde ve String tipinde değerin kendisini tutar.
 {: .notice--info}
 
 ```java
-char turkLira; //Değişken tanımlandı, değer atanmadı.
-int cityCode;  //Değişken tanımlandı, değer atanmadı.
-Human refOne;  //Referans tanımladı, herhangi bir nenseye bağlanmadı.
-		
-turkLira = '₺'; //Değer atandı. değrşken '₺' değerini tutuyor.
-cityCode = 25;  //Değer atandı. değrişken 25 değerini tutuyor.
-refOne = new Person("Nadi", 20); //Refrans nesneye bağlandı. Nesnenin adresini gösteriyor.
-System.out.println(refOne);     //Nesneni adresi: "baykoch.javase.b1.Human@5c8da962"
+char turkLira; // Değişken tanımlandı. Değer atanmadı.
+int cityCode;  // Değişken tanımlandı. Değer atanmadı.
+Human refOne;  // Referans tanımladı. Herhangi bir nesneye bağlanmadı.
+        
+turkLira = '₺'; //Değer atandı. değişken '₺' değerini tutuyor.
+cityCode = 25;  //Değer atandı. değişken 25 değerini tutuyor.
+refOne = new Person("Nadi", 20); //Referans nesneye bağlandı. Nesnenin adresini gösteriyor.
+System.out.println(refOne);     //Nesne adresi: "baykoch.javase.b1.Human@5c8da962"
 ```
 
-### Boolean 
-Mantıksal veri tipleridir. Önermelermelerde veya bayrak durumlarını kontrol etmek için kullanılır. `True` ve `False` olmak üzere 2 değerine sahiptir.
+### Boolean
+Mantıksal veri tipleridir. Önermelerde veya bayrak durumlarını kontrol etmek için kullanılır. `True` ve `False` olmak üzere 2 değerine sahiptir.
 
 ### byte
-8 bit işaretli değişkendir.1 bir işareti artı veya eksi, 7 bit ile sayının değeri belirlenir. Bellek kullanım miktarının önemli olduğu yazılımlarda veya sayıları sınırlamak istendiği durmlarda tercih edilir.
+8 bit işaretli değişkendir.1 bir işareti artı veya eksi, 7 bit ile sayının değeri belirlenir. Bellek kullanım miktarının önemli olduğu yazılımlarda veya sayıları sınırlamak istendiği durumlarda tercih edilir.
 
 ### short  
 16 bit ifade edilir. Byte kullanımı bilgi az bellek gerektiren durumlarda kullanılır.
 
-### int 
-Programlada en çok kullanılan tip olan `int` 32 bit ile ifade edilir. En şağdeki bit işaret biti olmak üzere  diğer 31 bit  -2^31 ile  2^31 arasında tam sayı değerlerlerini ifade edibilir. Java Se 8 sonra number sınıfdan türetilmiş sınıf hali olan **Integer** tipinde işaretsiz metotlar eklenmiştir. İleri konularda sarmalanmış veri tiplerinden bahsedilecektir.
+### int
+Programlarda en çok kullanılan tip olan `int` 32 bit ile ifade edilir. En sağdaki bit işaret biti olmak üzere  diğer 31 bit  -2^31 ile  2^31 arasında tam sayı değerlerlerini ifade edebilir. Java Se 8 sonra number sınıftan türetilmiş sınıf hali olan **Integer** tipinde işaretsiz metotlar eklenmiştir. İleri konularda sarmalanmış veri tiplerinden bahsedilecektir.
 
 Hex,octal ve binary sayıları göstermek için aşağıda belirtilen notasyonları kullanılır.
 
 - Hex     : `0x`
-- Octal   : `0` 
+- Octal   : `0`
 - Binary  : `0b`
 
 Örnek olarak `64` sayısının farklı sayı sistemlerinde kullanımı gösterilmektedir.
 
 ```java
-int intValue = 64;      // onlu sistemde            : 64 
+int intValue = 64;      // onlu sistemde            : 64
 int binInt = 0b1000000; // ikili sistemde           : 64
-int ocInt = 0100;       // sekizli sayı sistemi     : 64 
-int hexInt = 0x40;      // on altılı sayı sistemide : 64
+int ocInt = 0100;       // sekizli sayı sistemi     : 64
+int hexInt = 0x40;      // onaltılı sayı sisteminde : 64
 ```
 
-### long 
+### long
 
-64 bit ile ifade edilir.Sayı belitmek için sayın sonuna `L` eklenir.
+64 bit ile ifade edilir.Sayı belirtmek için sayın sonuna `L` eklenir.
 
 ### float and double
 
-Float 32 bit ve double 64 bit ile ifade edilir. Daha çok kesinlik gerektiren  işlemlerde kullanılır. Ondalık sayılar Java'da her zaman `double` olarak kabul edilir.Bu yüzden  karışıklıkları önlemek, işlem hatalarını aza indirmek için  `long`, `float`, `double` gibi tiplerin sonlarına sayının tipini belitmek için sırayla `l` ,`f`,`d` harfleri eklenebilir.
+Float 32 bit ve double 64 bit ile ifade edilir. Daha çok kesinlik gerektiren  işlemlerde kullanılır. Ondalık sayılar Java'da her zaman `double` olarak kabul edilir.Bu yüzden  karışıklıkları önlemek, işlem hatalarını aza indirmek için  `long`, `float`, `double` gibi tiplerin sonlarına sayının tipini belirlemek için sırayla `l` ,`f`,`d` harfleri eklenebilir.
 
 ```java
 double d;
@@ -103,18 +103,18 @@ int lastPre = 52_;
 ```
 #### IEEE 754
 
-Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade  edilir. IEEE 754 bazı sayı göstermede bazı kısıtlamalara sahiptir. Yani `0` ve `2^−126` arasındaki sayılar gösterilemez. Bu aralıkta yapılan işlemlerde hata alınabilir. 
+Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade  edilir. IEEE 754 bazı sayı göstermede bazı kısıtlamalara sahiptir. Yani `0` ve `2^−126` arasındaki sayılar gösterilemez. Bu aralıkta yapılan işlemlerde hata alınabilir.
 
 ```java
 double ieee = 0.1 * 3 - 0.3;
 System.out.println(ieee); // işlemin sonucu eden 0 değil.
 ```
 
-Real time, sağlık veya fınans kusuratların çok onemli olduğu işlemlerde boyle hatalar ölümçul olabilir. Bilgisayarın doğasında kayanklana kısıtlaları aşmak için `BigDecimal` sınıfı yazılmıştır. Bu sınıf ile bir sayının ondalık kısmını sınırlama, hangi basamakta aşağı veya yukarı yuvarlama işlemine karar verme gibi bir çok işlem yapılabilir.   `BigDecimal` sonra bahsedeceğiz.
+Real time, sağlık veya fınans küsuratların çok önemli olduğu işlemlerde bu gibi hatalar ölümcül olabilir. Bilgisayarın doğasından kaynaklanan kısıtlamaları aşmak için `BigDecimal` sınıfı yazılmıştır. Bu sınıf ile bir sayının ondalık kısmını sınırlama, hangi basamakta aşağı veya yukarı yuvarlama işlemine karar verme gibi bir çok işlem yapılabilir.   `BigDecimal` sonra bahsedeceğiz.
 
 ### char
 
-16 bitlik unicode biçiminde tanımlanmiştir.
+16 bitlik unicode biçiminde tanımlanmıştır.
 
 ```java
 // TL simgesi unicode
@@ -134,9 +134,9 @@ Basit veri tiplerinin kapsam aralıkları:
 | char    | 2 byte                           | 0 to 65,536 (işaretsiz)                                 |
 | boolean | Uzunluğu sanal makineye bağlıdır | true or false                                           |
 
-### Final Keyword 
+### Final Keyword
 
-`Final` anahtar kelimesinin bir  çok kullanım tipi vardır. `Final` anahtar kelimesi ile tanımlanmış bir değişken ilk değer atası yapıldıktan  sonra değiştirilemez.
+`Final` anahtar kelimesinin bir  çok kullanım tipi vardır. `Final` anahtar kelimesi ile tanımlanmış bir değişkene ilk değer ataması yapıldıktan sonra değiştirilemez.
 
 ```java
 final float pi = 3.14f;
@@ -145,14 +145,14 @@ pi = 3.145f;           //Hata The final local variable pi cannot be assigned
 
 ## Karmaşık Veri Tipleri
 
-Karmaşık veri tipleri  sınıftan veya arayüz üretilir.  Aynı sınıf veya arayüzden üretilen tipler ayni tipe sahiptir.   Bellekte belirli bir alını tutan nesnelere onun referansı ile ulaşılır. Referans bir bakımı eve yani nesneye ulaşmamızı sağlayan sanal adrestir.   C dilinde işaretçi ‘pointer’  fiziksel  adresi belirtirken Java’da referans  fiziksel adresi belirtmez.  
+Karmaşık veri tipleri  sınıftan veya arayüz üretilir.  Aynı sınıf veya arayüzden üretilen tipler ayni tipe sahiptir.   Bellekte belirli bir alanı tutan nesnelere onun referansı ile ulaşılır. Referans bir bakımı eve yani nesneye ulaşmamızı sağlayan sanal adrestir.   C dilinde işaretçi ‘pointer’  fiziksel  adresi belirlerken Java’da referans  fiziksel adresi belirtmez.  
 
 - Bir nesnenin birden fazla referansı olabilir.  
 
   ```java
   // Ali nesnesine refOne veya refTwo referansı ile ulaşabilir.
-  Human refOne = new Human("Ali", 23); 
-  Human refTwo = refOne; 
+  Human refOne = new Human("Ali", 23);
+  Human refTwo = refOne;
   ```
 
 - Bir nesne aynı anda sadece bir referans tutar.
@@ -160,24 +160,24 @@ Karmaşık veri tipleri  sınıftan veya arayüz üretilir.  Aynı sınıf veya 
 - Bir nesnenin referansı kaybolursa nesneye ulaşılamaz.
 
    ```java
-   Person refOne = new Person("Ali", 23); 
-   Person refTwo = new Person("Veli", 23); 
+   Person refOne = new Person("Ali", 23);
+   Person refTwo = new Person("Veli", 23);
    refOne = refTwo;  // Ali nesnesine artık ulaşılamaz.
    ```
 
-- Besit tipler ve `String`tipi  değiştirebilir `Mutable` tiplerdir. -`String` hariç- Basit ve `String` değişkenlerin yapılan işlemler sonucunda nesne yeniden üretilir. 
+- Basit tipler ve `String`tipi  değiştirebilir `Mutable` tiplerdir. -`String` hariç- Basit ve `String` değişkenlerin yapılan işlemler sonucunda nesne yeniden üretilir.
 
   ```java
   String mutableString = "Java";
   mutableString = mutableString.concat("Se");  // "JavaSE" nesne katarı üretildi
-  				
-  int mutableInt = 78; 
+                  
+  int mutableInt = 78;
   mutableInt = mutableInt + 2; //80 değeri üretildi.
   ```
 
   Peki, `78` ve `Java` değişkenlerine ne oldu? Bu değişkenler *Java Garbage Collection* tarafında imha edildi.
 
-- Karmaşık tipler değiştirebilir `Immutable` tiplerdir. Karmşık nesne üzerinde herhanggi bir işlem yeniden nense üretmez. Kendi üzerinde güncellenir. 
+- Karmaşık tipler değiştirebilir `Immutable` tiplerdir. Karmaşık nesne üzerinde herhangi bir işlem yeniden nense üretmez. Kendi üzerinde güncellenir.
 
   ```java
   Person refOne = new Person("Ali", 25); // Ali kişisi oluşturuldu ve refOne bağlandı
@@ -186,12 +186,12 @@ Karmaşık veri tipleri  sınıftan veya arayüz üretilir.  Aynı sınıf veya 
   System.out.println(refOne.getName()); // "Veli" aynı nesneyi işaret ediyor.
   System.out.println(refTwo.getName()); // "Veli" aynı nesneyi işaret ediyor.
   ```
-  
+
   {% include figure image_path="/assets/images/java-ref.png" alt="java type" caption=""%}
 
 Java üretilen değişkenlere ilk değer ataması `initialization` yapılması zorunlu değildir. Java derleyici `initialized`  edilmemiş değişkenlere `default` değer atar.  
 
-**Not:** 
+**Not:**
 Initialization: ilk değer ataması yapmaktır.
 {: .notice--warning}
 
@@ -207,45 +207,45 @@ Initialization: ilk değer ataması yapmaktır.
 | boolean                | false      |
 | String (or any object) | null       |
 
-Eğer refarans değeri koparılmış yanı değeri `null` olan bir karmaşık nesneye ulaşmak istedediğinizde hata `java.lang.NullPointerException` alırız.
+Eğer referans değeri koparılmış yanı değeri `null` olan bir karmaşık nesneye ulaşmak istediğinizde hata `java.lang.NullPointerException` alırız.
 
 ```java
 Person refOne = new Person("Ali", 20); //Bir kişi üretildi ve refOne referansına bağlandı.
 refOne = null;                         //Referans adresini kopardık.
 
-System.out.println(refOne);            // Referasın değeri `null`
+System.out.println(refOne);            // Referans değeri `null`
 System.out.println(refOne.getAge());   // Hata! refOne artık nesnenin adresini göstermiyor.
 ```
 
 ## Scope (Kapsam)
 
-Bir değişkenin ulaşılabilirlik alanı onun kapsamını belirler. Üstlendikleri rol bakımında Java’da değişkenler 3 ayrıılır.  
+Bir değişkenin ulaşılabilirlik alanı onun kapsamını belirler. Üstlendikleri rol bakımında Java’da değişkenler 3 ayrılır.  
 
 1. Nesne Değişkenleri (object variables)
 2. Sınıf Değişkenleri (class variable)
 3. Yerel Değişkenleri (local variable)
 
-Javada aslında `global` değişkeni kavramı yoktur, üye değişkenleri  vardır. Nense ve sınıf değişkenlerine `member or instance valiable` üye değişkenleri denir. Bu değişkenler bulunduğu sınıf içinde `global` dır. İleride daha detaylı bir şekilde bahsedeceğiz, şimdilik `member valiable` kısaca biraz bahsedelim.  
+Javada aslında `global` değişkeni kavramı yoktur, üye değişkenleri  vardır. Nesne ve sınıf değişkenlerine `member or instance variable` üye değişkenleri denir. Bu değişkenler bulunduğu sınıf içinde `global` dır. İleride daha detaylı bir şekilde bahsedeceğiz, şimdilik `member variable` kısaca biraz bahsedelim.  
 
-Sınıf bir şablon oluğunu ve sınıftan üretilen `object` nesne ile hayat bulduğundan bahsetmiştik. Üretilen bir nesnenin durumunu ifade eden `attribute` özeliklerin tümüne nesne değişkenleri denir. Nesne değişkeninin kapsamı önüne aldığı kısıtlayıcı göre belirlenir.  
+Sınıf bir şablon olduğunu ve sınıftan türetilen `object` nesne ile hayat bulduğundan bahsetmiştik. Üretilen bir nesnenin durumunu ifade eden `attribute` özelliklerin tümüne nesne değişkenleri denir. Nesne değişkeninin kapsamı önüne aldığı kısıtlayıcı göre belirlenir.  
 
-Sınıf değişkenleri üretilen nesneye bağlı değildir. Üretilen tüm nesneleri temsil eder. Sınıf değişkenleri tanımlamada bir çok amaç olabilir. En basitinden bir nesneden kaç tane üretildiğini bulmak için kullanılabilir.
+Sınıf değişkenleri üretilen nesneye bağlı değildir. Üretilen tüm nesneleri temsil eder. Sınıf değişkenleri tanımlama da bir çok amaç olabilir. En basitinden bir nesneden kaç tane üretildiğini bulmak için kullanılabilir.
 
 ```java
 public class Person {
     //Sınıf değişkeni
-	public static int countPerson; // Üretilen toplam nesne sayısı
-	//Nesne değişkenleri
-	private String name;          
-	private String surname;
-	private String adress;
-	private int age;
+    public static int countPerson; // Üretilen toplam nesne sayısı
+    //Nesne değişkenleri
+    private String name;          
+    private String surname;
+    private String adress;
+    private int age;
 
-	public Person() {             // Default nense kurucu
-		countPerson++;            // Her nesne üretildiğinde bir arttır. 
-	}
-	
-}	
+    public Person() {             // Default nesne kurucu
+        countPerson++;            // Her nesne üretildiğinde bir arttır.
+    }
+    
+}    
 ```
 
 Main test metodu yazalım.
@@ -253,65 +253,65 @@ Main test metodu yazalım.
 ```java
 Person ali = new Person();  // 1. nesne
 Person veli = new Person(); // 2. nesne
-		
-System.out.println(Person.countPerson); // = 2, ikitane nense oluşturdu.
+        
+System.out.println(Person.countPerson); // = 2, iki tane nesne oluşturma.
 ```
 
 ### Yerel Değişkenleri (local variable)
 
-Yerel değişkenliği metotların içinde tanımlana değişkenlerdir. İsimlendirme kurallarında metot için de tanımlanan değişkenin isminin üye değişkeni ile aynı olmasının sakıncalı bir yaklaşım olduğundan bahsetmiştik. Bu gibi bazı puf noktaları sıralayalım.
+Yerel değişkenliği metotların içinde tanımlanan değişkenlerdir. İsimlendirme kurallarında metot için de tanımlanan değişkenin isminin üye değişkeni ile aynı olmasının sakıncalı bir yaklaşım olduğundan bahsetmiştik. Bu gibi bazı püf noktaları sıralayalım.
 
 - Bir bloğun alt kapsamlarında aynı isimde değişken tanımlanamaz.
 
    ```java
    int localOne;    
    for (int i = 0; i < 3; i++) {
-   	i++;
-   	int localOne;   // Hata! bloğun alt bloğunda aynı değişken tanımlanamaz.
+       i++;
+       int localOne;   // Hata! bloğun alt bloğunda aynı değişken tanımlanamaz.
    }
    ```
 
-- Aynı seviyedeki bloklar içinde aynı  isimde değişken tanımlanabilir. 
+- Aynı seviyedeki bloklar içinde aynı  isimde değişken tanımlanabilir.
 
   ```java
   for (int i = 0; i < 3; i++) {  // for içinede `i` değişkeni tanımlanmış   
-  	...
+      ...
   }
   while (localOne > 0) {         // Aynı seviyedeki while içinde `i` tanımlanabilir.      int i;
   }
   ```
 
-- Bir değişken çağrıldığında, bulunduğu bloktan başlayarak üst kapsamlara doğru tarama yapar. 
+- Bir değişken çağrıldığında, bulunduğu bloktan başlayarak üst kapsamlara doğru tarama yapar.
 
   ```java
    private static int localOne = 4;      // 1.instance variable
    
    public static void main(String[] args) {
-   	
+       
        System.out.println(localOne);     // 2. print = 4
-   	 int localOne = 7;
-   		
-   	 if (localOne != 0) {
-   	 	 System.out.println(localOne); // 3. print = 10
-   	 } 
-   	 scopeOne();         // 4. `scopeOne` metodu cağrılıyor.
-   	 scopeTwo(localOne); // 5. `scopeTwo` metoduna `localOne` değişkeni gönderiliyor.
+        int localOne = 7;
+           
+        if (localOne != 0) {
+             System.out.println(localOne); // 3. print = 10
+        }
+        scopeOne();         // 4. `scopeOne` metodu cağrılıyor.
+        scopeTwo(localOne); // 5. `scopeTwo` metoduna `localOne` değişkeni gönderiliyor.
    }
    
    public static void scopeOne () {
-   	 System.out.println(localOne);  // 6. print = 4
+        System.out.println(localOne);  // 6. print = 4
    }
    
    public static void scopeTwo (int localOne) {
-   	 System.out.println(localOne); // 7. print = 10
-   }	
+        System.out.println(localOne); // 7. print = 10
+   }    
   ```
 
-1. Bir sınıf değişkeni en üst kapsamda tanımlandı. 
+1. Bir sınıf değişkeni en üst kapsamda tanımlandı.
 
 2. Main blok içinde Java Derleyici `localOne ` değişkenini arar. Bu noktadan önce herhangi bir değişken tanımlanmadığı için üst değişkeni `4`  alır, konsola yazar.
 
-3. `İf` bloğu içinde `localOne ` aranır ve bulunamaz. Bir bir üst kapsam olan `Main`bloğunda arama yapılır; `10` bulunur, sonuç olarak konsola yazılır. Bir üst kapsamdaki `4` değeri kullanılmaz. 
+3. `İf` bloğu içinde `localOne ` aranır ve bulunamaz. Bir bir üst kapsam olan `Main`bloğunda arama yapılır; `10` bulunur, sonuç olarak konsola yazılır. Bir üst kapsamdaki `4` değeri kullanılmaz.
 
 4. `scopeOne` metodu çağrılıyor.
 
@@ -319,7 +319,7 @@ Yerel değişkenliği metotların içinde tanımlana değişkenlerdir. İsimlend
 
 6. Herhangi bir değer geçilmediğinden bir üst seviyedeki  `localOne = 4` kullanılır.
 
-7. `Main` metodunda tanımlanan `10` değeri kullanılır. 
+7. `Main` metodunda tanımlanan `10` değeri kullanılır.
    ```java
    4
    10
@@ -329,7 +329,7 @@ Yerel değişkenliği metotların içinde tanımlana değişkenlerdir. İsimlend
 
 ## Tip Çevrimleri (Type Conversion)
 
- Farklı türde tipleri bir birine dönüştürülmesine tip çevrimi denir. Java kuvvetli tipli dil olduğunda her türlü çevrime izin vermediği gibi çevrim işleminde bir çok kontrol yapar. Karmaşık tiplerde çevrimleri OOP kısımlarından bahsederken değineceğiz. Bu seviyede karmaşık tiplerde çevrimleri anlatmak mantıksız olacaktır.  
+ Farklı türde tipleri birbirine dönüştürülmesine tip çevrimi denir. Java kuvvetli tipli dil olduğunda her türlü çevirime izin vermediği gibi çevrim işleminde birçok kontrol yapar. Karmaşık tiplerde çevrimleri OOP kısımlarından bahsederken değineceğiz. Bu seviyede karmaşık tiplerde çevrimleri anlatmak mantıksız olacaktır.  
 
  Basit tiplerde çevrimle devam edelim. 3 türlü tip çevrimi vardır.
 
@@ -338,17 +338,17 @@ Yerel değişkenliği metotların içinde tanımlana değişkenlerdir. İsimlend
 3. Genişleten Çevrim (Widening)
 
 ```java
-boolean impossible = 0; 	  // imkansız çevrim
-double wide = 173.2f;  		  // genişleten çevrim float to double
-float narrow = wide; 		  // daraltan çevrim, double to float bilgi kaybı olabileceğinden hata verecektir.   
+boolean impossible = 0;       // imkansız çevrim
+double wide = 173.2f;            // genişleten çevrim float to double
+float narrow = wide;           // daraltan çevrim, double to float bilgi kaybı olabileceğinden hata verecektir.   
 float narrow = (float) wide; //Ancak kullanıcının `cast`, yani zorlaması ile yapılabilir.
 ```
 
 
 
- Boolen tipinde arasında bir çevrim imkansızdır. Benzer şekilde `short` ve  `byte` ile `char` arasında çevrim olmaz. `Char` işaretsiz, `short` ve `byte` işaretlidir.
+ `Boolean` tipinde arasında bir çevrim imkansızdır. Benzer şekilde `short` ve  `byte` ile `char` arasında çevrim olmaz. `Char` işaretsiz, `short` ve `byte` işaretlidir.
 
- Tamsayılar rasyonel sayılara çevrilebilirler.	
+ Tamsayılar rasyonel sayılara çevrilebilirler.    
 
  Genişleten `wide conversion` çevrimlerde kullanıcının `cast` yapmasına gerek yoktur. Genellikle bilgi kaybı da olmaz. Genellikle diyoruz çünkü bazı durumlarda olabilir.  
 
@@ -356,29 +356,28 @@ float narrow = (float) wide; //Ancak kullanıcının `cast`, yani zorlaması ile
 
  Kırmızı ile gösterilen yerlerde bilgi kaybı olabilir.
 
-1. Maksimum `int` sayısını `float`a çevrim yaparken ondalık sayı kısımları kaybolur.
+1. Maksimum `int` sayısını `float`a çevirme yaparken ondalık sayı kısımları kaybolur.
 
-2. `long` 64 bit uzunlukta olduğundan  32 bit `float` çevrimde veri kaybı olur.
+2. `long` 64 bit uzunlukta olduğundan  32 bit `float` çevirmede veri kaybı olur.
 3. Maksimum `long` sayısını `double` tipine çevrim yaparken ondalık sayı kısımları kaybolur.
 
 ```java
 int intMax = 2_147_483_647;
 float lossPrecisionFloat = intMax;   //Son 2 basamak bilgi kaybı oldu. ...47 to ...50
-System.out.println("int to float  :"+lossPrecisionFloat); //2.14748365E9 
-		
+System.out.println("int to float  :"+lossPrecisionFloat); //2.14748365E9
+        
 long longMax = 9_223_372_036_854_775_807L;
 lossPrecisionFloat = longMax;        //Son 10 basamakta yuvarlama yapıldı. ...720.236.854.775.807 to ...720.000.000.000
 System.out.println("long to float  :"+lossPrecisionFloat); //9.223372E18
 
 double lossPrecisionDouble = longMax; //Son 4 basamakta yuvarlama yapıldı. ...75.807 to 76.000
-System.out.println("long to double  :"+lossPrecisionDouble); //9.223372036854776E18	
+System.out.println("long to double  :"+lossPrecisionDouble); //9.223372036854776E18    
 ```
 
  Daraltan çevrimler bilgi kaybı yaşatacağı için doğrudan değişkenleri birbirine eşitleyerek yapılmaz. `Cast` yani dönüşüm işlemine tabi tutulmalıdır.
 
 ```java
 float pi = 3.14f;
-int piNarrow = (int) pi;   //Ondalık kısım 0.14 kayboldu. 
+int piNarrow = (int) pi;   //Ondalık kısım 0.14 kayboldu.
 System.out.println(piNarrow);  // 3
 ```
-

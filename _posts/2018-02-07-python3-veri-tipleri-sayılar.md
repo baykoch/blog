@@ -1,14 +1,14 @@
 ---
 title: "Python Veri Yapıları 1. Sayılar"
 last_modified_at:
-categories: 
+categories:
   - Python
 tags:
   - integer
   - boolean
   - complex numbers
-  - floating point numbers 
-  - bitwise operators 
+  - floating point numbers
+  - bitwise operators
 toc: true
 toc_label: "Python Numbers"
 author_profile: True
@@ -21,7 +21,7 @@ Bilgisayarların yaptığı tek iş aslında verileri yönetmek, onlar üzerinde
 
 ## Python Varsayılan Veri Tipleri
 
-Her programlama dillerinin dışarıdan herhangi bir kütüphaneye ihtiyaç duymadan, yerleşik desteklediği veri tipleri vardır.Python veri tiplerine yaklaşımı biraz farklıdır, değişkenlerini tiplerini belirmek için isim etiketlerine (Integer,String vb.) ihtiyaç duymaz. Aklımıza Python'nun eğer biz belirtmesek değişkenin `integer` veya `string` olduğunu nasıl anlıyor sorusu takılabilir. Bu soruyu  Python dinamik atama yapması ile  açıklarız. Python atanan değerin  içeriğine bakar sayi ise `integer` karakter dizi ise `string` vb. olarak işlemine devam eder.
+Her programlama dillerinin dışarıdan herhangi bir kütüphaneye ihtiyaç duymadan, yerleşik desteklediği veri tipleri vardır.Python veri tiplerine yaklaşımı biraz farklıdır, değişkenlerini tiplerini belirmek için isim etiketlerine (Integer,String vb.) ihtiyaç duymaz. Aklımıza Python'nun eğer biz belirtmezsek değişkenin `integer` veya `string` olduğunu nasıl anlıyor sorusu takılabilir. Bu soruyu  Python dinamik atama yapması ile  açıklarız. Python atanan değerin  içeriğine bakar sayi ise `integer` karakter dizi ise `string` vb. olarak işlemine devam eder.
 
 ```python
 
@@ -55,7 +55,7 @@ Python sayı tiplerine geçmeden önce dilin bazı karakterlere yükledikleri ma
 | *  | Operatörün sağ ve solundaki değerleri birbiri ile çarpar.     | s = x * y               |
 | /  | X değerini y değerine böler. | s = x / y               |
 | %  | X değerini x'ye bölümünden kalanı  verir.  | s = x % y                 |
-| ** | X değerinin y kez çarpama işlemidir.      | s = x ** y  |
+| ** | X değerinin y kez çarpma işlemidir.      | s = x ** y  |
 | // | Bölme işlemini sonucunu tam sayıya yuvarlar. |    s = x // y                       |
 
 
@@ -90,7 +90,7 @@ print ("Aşağı Yuvarlama : ", result)
 
 ### Booleans
 
-Mantıksal veri tipileridir.Önermelerin gerçekleşebilmesi bilmesi veya durumları kontrol ermek için kullanılır. `True` ve `False`  olmak üzere 2 değerine  sahiptir. Aslında burda `True` 1 değerine `False`  0 değerine  eşittir.
+Mantıksal veri tipleridir.Önermelerin gerçekleşebilmesi bilmesi veya durumları kontrol ermek için kullanılır. `True` ve `False`  olmak üzere 2 değerine  sahiptir. Aslında burda `True` 1 değerine `False`  0 değerine  eşittir.
 
 
 
@@ -102,7 +102,7 @@ Python kayan noktalı sayıları [IEEE 754](https://en.wikipedia.org/wiki/Double
 - Exponent (11 Bit) : Sayının  üstel kısmı kodlanır.
 - Mantissa (52 Bit) : Sayının kesirli kısmı kodlanır.
 
-```python 
+```python
 x = 225.455 ** 7    # x = 2.960868358019457e+16
 
 print (3*0.1 - 03)  # Sonuç neden 0 değil ?
@@ -110,12 +110,12 @@ print (3*0.1 - 03)  # Sonuç neden 0 değil ?
 
 ### Complex Numbers
 
-Karmaşık sayılar elektrik başta olma üzere birçok mühendislik alanında kullanılmaktadır.Python karmaşık sayıları destekler.
+Karmaşık sayılar elektrik başta olmak üzere birçok mühendislik alanında kullanılmaktadır. Python karmaşık sayıları destekler.
 
-```python 
+```python
 #Karmaşık Sayılarda İşlemler
 
-c = 6 + 2j 
+c = 6 + 2j
 c2 =4.2 + 5.1j
 
 print("Real Kısmı  :", c.real)  
@@ -129,13 +129,13 @@ print("Üst alma    :", c ** 2)
 
 ### Decimal and Fraction  
 
-Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade edildiğinden bahsetmiştik.EEE 754 bazı sayı göstermede bazı kısıtlamalara sahiptir.Yani `0` ve `2^−126` arasındaki sayılar gösterilemez.İkinci önemli hususta sayıların ondalık kısmını sabitlemek isteyebiliriz.
+Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade edildiğinden bahsetmiştik. İEEE 754 bazı sayı göstermede bazı kısıtlamalara sahiptir.Yani `0` ve `2^−126` arasındaki sayılar gösterilemez.İkinci önemli hususta sayıların ondalık kısmını sabitlemek isteyebiliriz.
 
 1. Gösterilmeyen sayılara çözüm getirme;
    ```python
    from decimal import Decimal
    
-   float_issue = 0.1 * 3 - 0.3 
+   float_issue = 0.1 * 3 - 0.3
    float_issue_fix = Decimal('0.1') * Decimal('3') - Decimal('0.3')
    
    print(float_issue)
@@ -145,7 +145,7 @@ Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade edildiğinden
    >
    > 0.0
 
-2. Örnek olarak telefon lira  kullanımı ile ilgili bir program hazırlayalım.Dakika başına 2.45 lira kesimi yapalım. Programı `decimal` madülüne kullanmadan ve kullanarak yazalım. Dikkat ederseniz sayının ondalık kısmı çok şişirilmiş iken `getcontext` kullanarak ondalık kısmı belirli bir uzunlukta sabit tutabiliriz.  
+2. Örnek olarak telefon lira  kullanımı ile ilgili bir program hazırlayalım.Dakika başına 2.45 lira kesimi yapalım. Programı `decimal` modülüne kullanmadan ve kullanarak yazalım. Dikkat ederseniz sayının ondalık kısmı çok şişirilmiş iken `getcontext` kullanarak ondalık kısmı belirli bir uzunlukta sabit tutabiliriz.  
    
    ```python
    from decimal import Decimal, getcontext
@@ -163,7 +163,7 @@ Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade edildiğinden
    print(cost)
    print(pre_cost)
    ```
-  
+
    > 9.065000000000001
    >
    > 9.07
@@ -188,8 +188,8 @@ Kesirli sayılarda işlem yapmak için `Fraction` modülü kullanabilir.
  ```python
 from fractions import Fraction
 
-x = Fraction(2, 5) 
-y = Fraction(2, 3) 
+x = Fraction(2, 5)
+y = Fraction(2, 3)
 result = a + b # 2/5 + 2/3 = 16/15
 print(result)
  ```
@@ -212,7 +212,7 @@ print("Hex :",0x40,"Octal :",0o100,"Binary :",0b1000000)
 > Hex : 64 Octal : 64 Binary : 64
 
 
-### Bitwise Operators 
+### Bitwise Operators
 
 [Byte](https://tr.wikipedia.org/wiki/Bayt) seviyesinde yapılan operasyonları tablo halinde görelim.
 
@@ -233,7 +233,7 @@ y = 7             # 7 = 0000 0111
 print ('x decimal değeri      :',x,'Binary  :',bin(x))
 print ('y decimal değeri      :',y,' Binary  :',bin(y))
 
-result = x & y;        # AND 
+result = x & y;        # AND
 print ("AND Operation         :", result,'Binary:',bin(result))
 
 result = x | y;        # OR
@@ -248,11 +248,13 @@ print ("Complement Operation  :", result,'Binary:',bin(result))
 result = x << 2;       # LEFT SHIFT
 print ("LEFT SHIFT Operation  :", result,'Binary:',bin(result))
 
-result = x >> 2;       # RIGHT SHIFT 
+result = x >> 2;       # RIGHT SHIFT
 print ("RIGHT SHIFT Operation :", result,'Binary:',bin(result))
 ```
 
 {% include figure image_path="/assets/images/python3-data-bitwise.png" alt="Integer" caption=""%}
+
+
 
 
 
