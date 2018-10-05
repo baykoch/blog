@@ -1,15 +1,15 @@
 ---
-title: "Java "
+title: "Java Nesne Değişkenleri"
 last_modified_at:
 categories:
   - java
 tags:
-  - java  
-  - java  
-  - java 
-  - java 
+  - java durumu
+  - java attribute
+  - java sınıf değişkeni
+  - java Object Variable
 toc: true
-toc_label: "Java "
+toc_label: "Java Attribute"
 author_profile: True
 ---
 
@@ -24,7 +24,7 @@ Javada sınıflar; sınıf değişkenleri,nesne değişkenleri, kurucu metod ve 
 
 }
 ```
-## Özellikleri (Attributes)
+## Özellik (Attribute)
 Özellikler sınıfın durumunu(nasıl,ne kadar, hangi vs) tanımladığı için bunların tümüne sınıfın durumu`state` denir. Yani bir `Person()` sınıfın durumu nedir ? Adı soyadı, adresi yaşı ve cinsiyeti gibi
 ```java
 public class Person {
@@ -149,3 +149,121 @@ Yukarıdaki kod da görüldüğü üzere durum `state` yönetimi çok önemlidir
 Özetlersek bir nesne başka nesnelerin özellikleri(attribute) bulunması referans aracılığıyla sağlanır. Bu nesneden aslında bir tane var olup referansı ile birçok yerde ile olabileceğini gösterir. 
 
 > Esasında **nesne-merkezli** yazılımın gayeside budur: Referans üzerinden haberleşen nesneler oluşturmak.
+
+Bir örnek ile nesneler arasında ilişkileri görelim. Basit bir kütüphane kurgulayalım.
+
+- Kütüphane Sınıfı
+
+  ```java
+  public class Library {
+  
+  	String name;
+  	Section[] section;
+  
+  }
+  ```
+
+- Bölüm sınıfı
+
+  ```java
+  public class Section {
+  	
+  	String name;
+  	Book [] books;
+  	
+  }
+  ```
+
+- Kitap sınıfı
+
+  ```java
+  public class Book {
+  	
+  	String name;
+  	Author author;
+  	Section section;
+  }
+  ```
+
+- Yazar Sınıfı
+
+  ```java
+  public class Author {
+  	
+  	String name;
+  	Book [] books;
+  }
+  ```
+
+
+Dikkat edilirse hemen hemen hepsinin arasında bir bağlantı var. 
+
+1. `Library` ile `section` arasında: **1**’den **N** kadar,
+2. `section` ile `books` arasında: **1**’den **N** kadar,
+3. `Book` ile `section` arasında: **Birebir**,
+4. `Book` ile `author` arasında: **Birebir**,
+5. `Author` ile `book` arasına arasında: **1**’den **N** kadar  bağlantı var. 
+
+İki tane kitap nesnesi,  diğer sınıflardan birer nesne oluşturup referans ile  örümcek ağını kuralım.
+
+
+```java
+public class LibraryTest {
+
+	public static void main(String[] args) {
+
+		// Kütüphane nesnesi oluşturuldu.
+		Library lib1 = new Library();
+		lib1.name = "Halk Kitabevi";
+
+		// Bölüm nesnesi oluşturuldu.
+		Section sec1 = new Section();
+		sec1.name = "Türk Edebiyatı";
+
+		// Kitap 1 ve 2 nesneleri oluşturuldu.
+		Book book1 = new Book();
+		book1.name = "Saatleri Ayarlama Enstitüsü";
+		Book book2 = new Book();
+		book2.name = "Huzur";
+
+		// Yazar nesnesi oluşturuldu.
+		Author aut1 = new Author();
+		aut1.name = "Ahmet Hamdi Tanpınar";
+
+		// Kütüphane bölümü oluşturuldu ve sec1 bağlandı.
+		lib1.section = new Section[2];
+		lib1.section[0] = sec1;
+
+		// 1. kitabın yazarı ve bölümü bağlandı.
+		book1.author = aut1;
+		book1.section = sec1;
+
+		// 2. kitabın yazarı ve bölümü bağlandı.
+		book2.author = aut1;
+		book2.section = sec1;
+
+		// Yazarın kitapları oluşturuldu ve kitaplara bağlandı.
+		aut1.books = new Book[2];
+		aut1.books[0] = book1;
+		aut1.books[1] = book2;
+
+		// Bölümün kitapları oluşturuldu ve kitaplara bağlandı.
+		sec1.books = new Book[3];
+		sec1.books[0] = book1;
+		sec1.books[1] = book2;
+
+		// lib1.section[0].books[0] ile sec1.books[0] aynı nesneyi gösterir.
+		System.out.println("Sonuç = " + (lib1.section[0].books[0] == sec1.books[0]));
+
+		// laut1.books[1] ile sec1.books[1] aynı nesneyi gösterir.
+		System.out.println("Sonuç = " + (aut1.books[1] == sec1.books[1]));
+
+	}
+
+}
+```
+
+Toplamda beş tane nesne oluşturuldu. Birbirini içeren her bir nesne için yeniden nesne oluşturulamadı. Aralarındaki sahiplik referans ile sağlandı.
+
+
+

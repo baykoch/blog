@@ -60,8 +60,7 @@ Derleme ve yorumlayıcının tablo ile neler ifade ettiğine ve karşılaştırm
 
 **2.Bölüm:** Transfer aşamasıdır. Derlenen yerel sisteme; ağ üzerinden veya farlı yollar ile hedef sistemlere (Örnek:  Android OS)  taşınmasını ifade eder.
 
-
-3.Bölüm:** Java sınıf yükleyici JVM ye programın çalışması için gerekli olan kütüphaneleri yükler ve byte kodu doğrular. JVM işletim sistemi ile program arasında köprüdür. Java yorumlayıcı ve JIT derleyici iki bölüm ayrılır.
+**3.Bölüm:** Java sınıf yükleyici JVM ye programın çalışması için gerekli olan kütüphaneleri yükler ve byte kodu doğrular. JVM işletim sistemi ile program arasında köprüdür. Java yorumlayıcı ve JIT derleyici iki bölüm ayrılır.
 
 **JIT:** Byte kodu okur ve önemli noktaları derler. Derleme işlemimi yaparken hız optimizasyonu yaparak kodun hedef sistemde hızlı çalışmasını sağlar.[Daha ayrıntılı bilgi için tıklayınız.](http://www.wiki-zero.co/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvSklU)
 
