@@ -12,7 +12,7 @@ author_profile: True
 
 
 
-Dilim döndüğü, elimden geldiği kadar Java Se sürüm konularını burdan paylaşacağım. Ayrıca vakit buldukça yazılan konuları Javanın güncel sürümüne (şimdi Java 10) göre güncellenecektir. Java SE yaklaşık 20 bölümde, çok fazla detaya girmeden, sade ve önemli yerleri vurgulayarak anlatmaya çalışacağım. Umarım faydalı olur.
+Dilim döndüğü, elimden geldiği kadar Java SE konularını burdan paylaşacağım. Ayrıca vakit buldukça yazılan konuları Javanın güncel sürümüne (şimdi Java 10) göre güncellenecektir. Java SE yaklaşık 20 bölümde, çok fazla detaya girmeden, sade ve önemli yerleri vurgulayarak anlatmaya çalışacağım. Umarım faydalı olur.
 
 1.  [Giriş:](https://baykoch.github.io/blog/java/java-se-giri%C5%9F/) Programlama nedir? Java nedir ve özellikleri nelerdir? 
 
