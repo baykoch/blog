@@ -18,8 +18,8 @@ author_profile: True
 
 1. Değişkenlerin önlerine gelerek onları sabite (yani ilk atamadan sonra değiştirilemez) yapma.
 2. Metotlara geçilen değerleri sabite (*Final*) yapma
-3. ...
-4. ...
+3. (Soon)
+4. (Soon)
 
 
 ### 1. Değişkenleri “*Final*” Yapma

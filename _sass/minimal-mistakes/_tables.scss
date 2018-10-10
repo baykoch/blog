@@ -8,8 +8,6 @@ table {
   font-family: $global-font-family;
   font-size: $type-size-6;
   border-collapse: collapse;
-  
-  
 
   & + table {
     margin-top: 1em;
@@ -25,13 +23,11 @@ th {
   padding: 0.5em;
   font-weight: bold;
   text-align: left;
-  border:2px solid #404142;
 }
 
 td {
   padding: 0.5em;
   border-bottom: 1px solid mix(#000, $border-color, 25%);
-  border:2px solid #404142;
 }
 
 tr,
