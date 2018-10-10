@@ -8,19 +8,16 @@ tags:
   - java multidimensional arrays
   - java diziler
   - java foreach
-  - java equals()
-  - java binarySearch()
-  - java copyOf()
+  - java array metotları
 toc: true
 toc_sticky: true
 toc_label: "Java Arrays"
 author_profile: True
-mathjax: false
 ---
 Java diziler sabit uzunluğa sahip aynı türden (ilk veya karmaşık) elemanların tutulduğu veri yapılarıdır. Diler birer nesnedir ve bir arayüze (metotlara) sahiptir. Bu metotlardan konun ilerleyen evrelerinde bahsedilecek.
 Java'da diziler Java'da bulunan diğer veri yapılarına göre  `collections` daha  hızlıdır. Bunun iki temel sebebi vardır.
-1. Homojen : Aynı türden elemanlardan oluşması.
-2. Statik Yapı: Uzunluğu sabit olması.
+1. **Homojen:** Aynı türden elemanlardan oluşması.
+2. **Statik Yapı:** Uzunluğu sabit olması.
 ```
 Dizinin Tipi  Dizi Belirteçi `[]` Dizinin İsmi;
 int [] array;
