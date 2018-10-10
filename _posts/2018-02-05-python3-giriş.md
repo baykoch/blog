@@ -1,3 +1,5 @@
+
+
 ---
 title: "Python Derslerine Giriş"
 last_modified_at:
@@ -6,6 +8,7 @@ categories:
 tags:
   - Python Pep8
 toc: true
+toc_sticky: true
 toc_label: "Python Giris"
 author_profile: True
 mathjax: true

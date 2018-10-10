@@ -7,6 +7,7 @@ tags:
   - java data type
   - java primitive
 toc: true
+toc_sticky: true
 toc_label: "Java Data Type"
 author_profile: True
 mathjax: true

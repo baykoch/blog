@@ -10,6 +10,7 @@ tags:
   - floating point numbers
   - bitwise operators
 toc: true
+toc_sticky: true
 toc_label: "Python Numbers"
 author_profile: True
 mathjax: true

@@ -8,6 +8,7 @@ tags:
   - java block
   - java statement
 toc: true
+toc_sticky: true
 toc_label: "Java SE"
 author_profile: True
 mathjax: true

@@ -9,6 +9,7 @@ tags:
   - java for
   - java switch
 toc: true
+toc_sticky: true
 toc_label: "Java Flow Control"
 author_profile: True
 mathjax: false

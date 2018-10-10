@@ -6,6 +6,7 @@ categories:
 tags:
   - Kramdown
 toc: true
+toc_sticky: true
 toc_label: "Markdown"
 author_profile: True
 mathjax: true

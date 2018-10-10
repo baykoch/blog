@@ -6,9 +6,10 @@ categories:
 tags:
   - java durumu
   - java attribute
-  - java sınıf değişkeni
-  - java Object Variable
+  - java nesne değişkeni
+  - java nesne üretme
 toc: true
+toc_sticky: true
 toc_label: "Java Attribute"
 author_profile: True
 ---
@@ -38,7 +39,9 @@ public class Person {
 Sınıfın özellikleri iki alt başlığa ayrılır ve bu değişkenlerin toplamına üye değişkenleri (members variable), veri üyeleri (data variable) veya alanlar(fields) denir. 
 
 1. Nesne Değişkenleri (*Object Variable*)
-2. Sınıf Değişkenleri (*Class Variable*)
+2. Sınıf Değişkenleri (*Class Variable*) 
+
+Sınıf değişkenleri(*Class Variable*)  ileriki derslerde ele alınacak.
 
 ### Nesne Değişkenleri (Object Variable)
 

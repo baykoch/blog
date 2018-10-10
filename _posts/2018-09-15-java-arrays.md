@@ -12,6 +12,7 @@ tags:
   - java binarySearch()
   - java copyOf()
 toc: true
+toc_sticky: true
 toc_label: "Java Arrays"
 author_profile: True
 mathjax: false

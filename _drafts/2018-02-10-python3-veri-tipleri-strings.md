@@ -6,6 +6,7 @@ categories:
 tags:
   - strings
 toc: true
+toc_sticky: true
 toc_label: "Python Strings"
 author_profile: True
 mathjax: true
@@ -17,7 +18,7 @@ Programlama dillerinde kullanılması kaçınılmaz olan metinleri ifade etmek i
     - Tek tırnak `'metin'` sembolik kısa ifadelerde kullanılması önerilir(dict keys, regular expressions, SQL vb).
     - Çift tırnak `"metin"` daha uzun kelime gruplarının ifadesinde kullanılır.
     - 3'lü tırnak ise `"""metin"""` daha çok  [`docstrings`](https://www.python.org/dev/peps/pep-0257/)  oluşturmak için yazılan yorum satırlarında tercih edilir.
-       
+      
        ```python
        # Tek tırnal sembolik kısa ifadelerde 
        list1 = ['Fizik', 'Kimya', A, C];
@@ -33,7 +34,7 @@ Programlama dillerinde kullanılması kaçınılmaz olan metinleri ifade etmek i
 - Python `char` tek bir karakteri ifade eden veri tipi bulunmaz, yani bütün metin ifadeler `string`'dir. 
 - Python `string` ilgili bir çok yararlı modül ve kütüphaneler yazılmıştır. Bu yüzden metinlerle ilgili bir çok problemlerin çözümünde sık tercih edilen programlama dilidir.
 - `string` dizilerin özelliklerine sahiptirler. İlk eleman 1 ile değil `0` başlar. Herhangi bir indisdeki karaktere veya bir kısmına ulaşılabilir.
-   
+  
 ```python
 str = "Merhaba Dünya"
 print("Örnek metin      :",str)         # str'ini değerinin 
@@ -62,7 +63,7 @@ Yorum satırları veya `print` gibi madulü içinde çift tırnak ile verilen bi
 | \"              | Double quote (")               | Çift tırnak gösterir. |
 | \a              | ASCII Bell (BEL)               | Bip sesi verir.      |
 | \b              | ASCII Backspace (BS)           | İmleçi bir karakter geri alır. |
-| \f              | ASCII Formfeed (FF)            | Yeni satırda kaldığı yerden devam eder.|   
+| \f              | ASCII Formfeed (FF)            | Yeni satırda kaldığı yerden devam eder.|
 | \n              | ASCII Linefeed (LF)            | Yeni satırda en baştan devam eder.|
 | \r              | ASCII Carriage Return (CR)     | Satır başı yapar ve üzerine yazar. |
 | \t              | ASCII Horizontal Tab (TAB)     | Dikey Tab.     |
@@ -70,7 +71,7 @@ Yorum satırları veya `print` gibi madulü içinde çift tırnak ile verilen bi
 | \ooo            | Character with octal value ooo | Octal karakterler       |
 | \xhh            | Character with hex value hh    | Hex karakterler      |
 
-        
+
 ```python 
 print("1.Merhaba\
 Dünya")                         # Yeni satırı yok sayar.

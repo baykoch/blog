@@ -7,6 +7,7 @@ tags:
   - java style guide
   - java isimlendirme
 toc: true
+toc_sticky: true
 toc_label: "Java SE"
 author_profile: True
 mathjax: true

@@ -9,6 +9,7 @@ tags:
   - java Arithmetic
   - java Logical
 toc: true
+toc_sticky: true
 toc_label: "Java Operator"
 author_profile: True
 mathjax: true
