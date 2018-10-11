@@ -16,7 +16,7 @@ Dilim döndüğü, elimden geldiği kadar Java SE konularını burdan paylaşaca
 
 1.  [Giriş:](https://baykoch.github.io/blog/java/java-se-giri%C5%9F/) Programlama nedir? Java nedir ve özellikleri nelerdir? 
 
-2.  [Java Sınıf ,Nesne ve Kod Yapısı:](https://baykoch.github.io/blog/java/java-ifadeler-bloklar/) Kısaca sınıf, nesne neyi ifade ediyor? Java’da kod yapısı nasıldır?
+2.  [Java Sınıf ,Nesne ve Kod Yapısı:](https://baykoch.github.io/blog/java-s%C4%B1n%C4%B1f-nesne-ve-kod-yap%C4%B1s%C4%B1/) Kısaca sınıf, nesne neyi ifade ediyor? Java’da kod yapısı nasıldır?
 
 3.  [Java İsimlendirme ve Şekil Rehberi (Style Guide):](https://baykoch.github.io/blog/java/java-isimlendirme/) Uyulması önerilen standart yazma kuralları
 
