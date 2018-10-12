@@ -175,7 +175,7 @@ public class Methods {
 Java niteleyiciler iki ana alt başlıkta toplanır.
 
 1. Erişim Niteliyiciler (Access Modifier) : ***Public, Protected, Private***
-2. Diğer erişim niteleyici olmayan (Non-access Modifier) : ***Abstract, [Static](https://baykoch.github.io/blog/java-static-keyword/), [Final](https://baykoch.github.io/blog/java/java-final-keyword/), Synchronized, Native, Strictfp, Transient, Volatile***
+2. Diğer erişim niteleyici olmayan (Non-access Modifier) : ***Abstract, [Static](https://baykoch.github.io/blog/java/java-static-keyword/), [Final](https://baykoch.github.io/blog/java/java-final-keyword/), Synchronized, Native, Strictfp, Transient, Volatile***
 
 Genellikle ilk başta erişim niteleyici kullanılmakla birlikte her niteliciyi bir kez kullanılabilir. Kunular ilerledikce teker teker işlenecek ve sayfa bağlantısı eklenecektir.
 
