@@ -10,7 +10,6 @@ toc: true
 toc_sticky: true
 toc_label: "Java Data Type"
 author_profile: True
-mathjax: true
 ---
 
 Aslında bilgisayarın temel mantığı basittir. Elektrik devrelerindeki reaksiyonlara göre  var `1` yok `0` olarak belirlenir. Bu sıfır ve birler yana yana gelerek 8 bit yani bizim karakter diye adlandırdığımız sembolleri oluştururlar. Bu karakterler ilk zamanlar ASCII  adı altında tanımlanmıştı. Örneğin küçük harf `a` ikili sistemde ` b110 0001` ile ifade edilir. Bilimsel gelişmeler ile  bazı semboller,  ülkelerin doğal konuşma dillerine özgü harfler veya resmi para sembolleri bilgisayar dünyasına aktarılması ile ASCII ihtiyacı karşılayamaz hale gelmiştir. En son **unicode** -16 bit-  standart kodlama sistemi  geliştirmiştir.  Veri tipleri bu karakterleri kullanmak için kullanılan değerlerdir. Mesela **int**  -32 bit uzunluğunda- tam sayıları ifade edebilir.
@@ -108,7 +107,7 @@ Bilgisayar biliminde sayılar IEEE 754 standartlarına göre ifade  edilir. IEEE
 
 ```java
 double ieee = 0.1 * 3 - 0.3;
-System.out.println(ieee); // işlemin sonucu eden 0 değil.
+System.out.println(ieee); // işlemin sonucu neden "0" değil?
 ```
 
 Real time, sağlık veya fınans küsuratların çok önemli olduğu işlemlerde bu gibi hatalar ölümcül olabilir. Bilgisayarın doğasından kaynaklanan kısıtlamaları aşmak için `BigDecimal` sınıfı yazılmıştır. Bu sınıf ile bir sayının ondalık kısmını sınırlama, hangi basamakta aşağı veya yukarı yuvarlama işlemine karar verme gibi bir çok işlem yapılabilir.   `BigDecimal` sonra bahsedeceğiz.

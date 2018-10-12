@@ -1,18 +1,16 @@
-
-
 ---
 title: "Java Sınıf ,Nesne ve Kod Yapısı "
 last_modified_at:
 categories:
   - java
 tags:
-  - java se
-  - java pure
+  - java sınıf kavramı
+  - java nesne kavramı
+  - java sınıflandırma
 toc: true
 toc_sticky: true
 toc_label: "Java SE"
 author_profile: True
-mathjax: true
 ---
 
 ### Sınıflandırma (classification)

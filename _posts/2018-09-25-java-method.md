@@ -118,6 +118,31 @@ Eğer izah edemediysem ;
 1. Basit tipler değerleri  geçilir.
 2. Karmaşık tipler ise referansları geçilir. (Aslında doğru ifade değil)
 
+  Karmaşık tiplerin referans değerleri metotlara geçildiğinden  metot içinde yapılan işlemler asıl veriyi değiştirdiğinden bahsettik(Diziler de karmaşık tiptir!). Ama maalesef  String karmaşık veri tipi için bundan bahsedemeyiz.
+
+```java
+public class CallByValue {
+	 // Metoda String ve dizi karmaşık tiplerini geçme
+	public void testParam(String str, int[] array) {
+		// Veriyi güncelle
+        str = "Test";  
+		array[0] = 12; 
+
+	}
+	public static void main(String[] args) {
+		 CallByValue pr = new CallByValue();
+		 String str = "Hello";
+		 int [] array = {1,2,3};
+		 pr.testParam(str, array);
+		//String tipi hariç dizi ve diğer karmaşık tip verileri güncellenir.
+        for (int i : array) {
+			System.out.println(i); // print "12, 2, 3"
+		}
+		 System.out.println(str);  // print "Hello"
+	}
+}
+```
+
 ### Kod Bloğu (*Code Implementation*)
 
 Metot davranışını yerine getiren kısım. Davranışlardan dört farklı eylemi icara etmesini beklenir.
@@ -150,7 +175,7 @@ public class Methods {
 Java niteleyiciler iki ana alt başlıkta toplanır.
 
 1. Erişim Niteliyiciler (Access Modifier) : ***Public, Protected, Private***
-2. Diğer erişim niteleyici olmayan (Non-access Modifier) : ***Abstract, Static, Final, Synchronized, Native, Strictfp, Transient, Volatile***
+2. Diğer erişim niteleyici olmayan (Non-access Modifier) : ***Abstract, [Static](https://baykoch.github.io/blog/java-static-keyword/), [Final](https://baykoch.github.io/blog/java/java-final-keyword/), Synchronized, Native, Strictfp, Transient, Volatile***
 
 Genellikle ilk başta erişim niteleyici kullanılmakla birlikte her niteliciyi bir kez kullanılabilir. Kunular ilerledikce teker teker işlenecek ve sayfa bağlantısı eklenecektir.
 
