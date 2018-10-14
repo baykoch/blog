@@ -106,17 +106,20 @@ for (int i : intArray) {
 }
 ```
 
-Eğer dizi tanımlandığında  ilk değerler biliniyorsa `{}` arasında yazılabilir.  
+Eğer dizi tanımlandığında  ilk değerler biliniyorsa `{}` arasında yazılabilir.  Uzunluğu belirtilmiş dizi için paratezler içinde atama yapılamaz. 
 
 ```java
 char [] currencies = { '₺','£','$' };
 int[]      digits = { 0,1,2,3,4,5,6,7,8,9 };
 byte [] byteArrays= { 0b0111,0b0101,0b0010 };
 String [] elements = { "He","Ne","Ar","Kr","Xr" };
-        
+// Uzunluğu belirtilmiş dizi için paratezler içinde atama yapılamaz.
+int [] digit = new int[10];
+digit = {0,1,2,3,4,5,6,7,8,9}; // Hata !!
+// Complex type array      
 Person ali= new Person();
 Person veli= new Person();
-Person [] people= { ali,veli };      // Complex type array
+Person [] people= { ali,veli };      
 ```
 
 ### Çok Boyutlu Diziler (*Multidimensional Arrays*)
