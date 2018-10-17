@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "Java Dersleri"
-last_modified_at: 2018-06-04T12:04:24-04:00
+last_modified_at:
 tags:
   - java se 10
   - java pure
@@ -27,6 +27,9 @@ Dilim döndüğü, elimden geldiği kadar Java Se sürüm konularını burdan pa
 11.  [Java Final Anahtar Kelimesi](https://baykoch.github.io/blog/java/java-final-keyword/): (Tamamlanmadı)***Final*** kelimesinin kullanım alanları.
 12.  [Java Static Anahtar Kelimesi](https://baykoch.github.io/blog/java/java-static-keyword/): ***Static*** kelimesinin anlamı ve kullanım biçimleri.
 13.  [Java Değer Atama ve Başlatma Sırası](https://baykoch.github.io/blog/java/java-initializing/): Değişkenlere  tanımlama cümleleri, metot çağrıları ve ilk değer verme blokları (*Initialization Blocks*) ile değer atama (***initializing***) . Javada kodun çalışma düzeni ve sırası
+14.  [Java Paket ve Import Kavramları](https://baykoch.github.io/blog/java/java-package-import/): ***Package*** ve ***import*** anahtar kelimeleri.  Javada bulunan olağan (***core or pre-defined)*** paketler.
+
+
 
 
 
