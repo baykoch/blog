@@ -3,7 +3,7 @@ permalink: /about/
 title: "Java Dersleri"
 last_modified_at:
 tags:
-  - java se 10
+  - java se 11
   - java pure
   - java yenilikler
   - java notları
@@ -12,7 +12,7 @@ author_profile: True
 
 
 
-Dilim döndüğü, elimden geldiği kadar Java Se sürüm konularını burdan paylaşacağım. Ayrıca vakit buldukça yazılan konuları Javanın güncel sürümüne (şimdi Java 10) göre güncellenecektir. Java SE yaklaşık 20 bölümde, çok fazla detaya girmeden, sade ve önemli yerleri vurgulayarak anlatmaya çalışacağım. Umarım faydalı olur.
+Dilim döndüğü, elimden geldiği kadar Java SE konularını burdan paylaşacağım. Ayrıca vakit buldukça yazılan konuları Javanın güncel sürümüne (şimdi Java 11) göre güncellenecektir. Java SE yaklaşık 30 bölümde, çok fazla detaya girmeden, sade ve önemli yerleri vurgulayarak anlatmaya çalışacağım. Umarım faydalı olur.
 
 1.  [Giriş:](https://baykoch.github.io/blog/java/java-se-giri%C5%9F/) Programlama nedir? Java nedir ve özellikleri nelerdir?
 2.  [Java Sınıf ,Nesne ve Kod Yapısı:](https://baykoch.github.io/blog/java/java-s%C4%B1n%C4%B1f-nesne-ve-kod-yap%C4%B1s%C4%B1/) Kısaca sınıf, nesne neyi ifade ediyor? Java’da kod yapısı nasıldır?
@@ -24,10 +24,12 @@ Dilim döndüğü, elimden geldiği kadar Java Se sürüm konularını burdan pa
 8.  [Java Diziler :](https://baykoch.github.io/blog/java/java-arrays/) Tek ve çok boyutlu diziler, **Array** sınıfı ve metotları, **foreach** kullanımı
 9.  [Java Nesne Değişkenleri](https://baykoch.github.io/blog/java/java-object-create-attribute/): Nesnenin özellikleri ve durumu(Attributes). Nesne nasıl üretilir?
 10.  [Java Metot Kavramı](https://baykoch.github.io/blog/java/java-method/): Metot özellikleri, imzası ve arayüzü. Parametre nedir ve metotlara nasıl geçilir(call-by-value)? Kurucu (*Constructor*) Metotlar, This kelimesinin kullanımı
-11.  [Java Final Anahtar Kelimesi](https://baykoch.github.io/blog/java/java-final-keyword/): (Tamamlanmadı)***Final*** kelimesinin kullanım alanları.
+11.  [Java Final Anahtar Kelimesi](https://baykoch.github.io/blog/java/java-final-keyword/): ***Final*** kelimesinin kullanım alanları.
 12.  [Java Static Anahtar Kelimesi](https://baykoch.github.io/blog/java/java-static-keyword/): ***Static*** kelimesinin anlamı ve kullanım biçimleri.
 13.  [Java Değer Atama ve Başlatma Sırası](https://baykoch.github.io/blog/java/java-initializing/): Değişkenlere  tanımlama cümleleri, metot çağrıları ve ilk değer verme blokları (*Initialization Blocks*) ile değer atama (***initializing***) . Javada kodun çalışma düzeni ve sırası
 14.  [Java Paket ve Import Kavramları](https://baykoch.github.io/blog/java/java-package-import/): ***Package*** ve ***import*** anahtar kelimeleri.  Javada bulunan olağan (***core or pre-defined)*** paketler.
+15.  [Java Erişim Belirleyiciler](https://baykoch.github.io/blog/java/java-modifiers/): Üye değişkenlere, metotlara(***Public***, ***Protected***, ***Default***, ***Private*** ) ve sınıflara(***Public***, ***Default***) erişim belirleyiciler 
+16.  [Java Sahiplik ve Miras](https://baykoch.github.io/blog/java/java-inheritance/): Javada sahiplik(*Composite*) ve olma(*inheritance*) ilişkisi. ***Overriding***, ***Extends*** ve ***Super*** kavramları.
 
 
 

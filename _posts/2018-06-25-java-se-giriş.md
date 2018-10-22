@@ -24,7 +24,6 @@ Programlama her şeyden önce bir soyutlamadır. Peki, soyutlama nedir? Soyutlam
 Programlama dilleri bu **soyutlamadan** başka bir şey değildir. Bir problemi ne ihtiyaçtan fazla ne de az bilişim dünyasına soyutlanarak aktarılması ve problemin çözülmesi amaçlar. Örnek olarak akaryakıt istasyonunda bazı akaryakıt türlerinde yakıt ikmali yaptığımız düşünelim. Adım adım soyutlayarak problemi kabaca çözmeye ve anlamlandırmaya çalışalım:
 
 1. Akaryakıt türlerini kimyasal yapılarını, taşıtların ile akaryakıtlar arasındaki ilişkiyi -Benzinli Motorların Çalışma Sistemi Nedir? Nasıl Çalışır? - bilmeden türlerini **sınıflandırarak** program diline aktarıyoruz.
-
 2. Asla ihtiyaçtan ne az ne de fazla bir türü tanımlamıyoruz.(Mesela ileride motorin satışı da yapılabilir diye düşünerek motorin eklemesi yapmıyoruz.)
 3. Son olarak fatura tahsilat gibi işlemler için muhasebe bölümü oluşuyoruz.
 4. Akaryakıt Bölümü ve Muhasebe Bölümü **modelleyerek** akaryakıt istasyonu daha karmaşık sistemi Akaryakıt İstasyonu oluşturduk.
@@ -65,14 +64,14 @@ Derleme ve yorumlayıcının tablo ile neler ifade ettiğine ve karşılaştırm
 
 **JIT:** Byte kodu okur ve önemli noktaları derler. Derleme işlemimi yaparken hız optimizasyonu yaparak kodun hedef sistemde hızlı çalışmasını sağlar.[Daha ayrıntılı bilgi için tıklayınız.](http://www.wiki-zero.co/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvSklU)
 
-JVM uygun birçok programlama dili geliştirilmiştir. Bir grup yazılımcı Java’nın yetersiz olduğun yönleri düşünerek Scala geliştirmiştir. Vikipedia’dan bir kısmını kopyaladım.[Buradan](https://en.wikipedia.org/wiki/List_of_JVM_languages) inceleyebilirsiniz. Bununla birlikte direkt Java kullanmadan **JVM** üzerinde kod yazabilirsiniz. Öyle bir niyetiniz varsa sizi [buraya](https://dzone.com/articles/introduction-to-java-bytecode) yönlendirebilirim.
+JVM uygun birçok programlama dili geliştirilmiştir. Bir grup yazılımcı Java’nın yetersiz olduğun yönleri düşünerek Scala geliştirmiştir. Vikipedia’dan bir kısmını kopyaladım. [Buradan](https://en.wikipedia.org/wiki/List_of_JVM_languages) inceleyebilirsiniz. Bununla birlikte direkt Java kullanmadan **JVM** üzerinde kod yazabilirsiniz. Öyle bir niyetiniz varsa sizi [buraya](https://dzone.com/articles/introduction-to-java-bytecode) yönlendirebilirim.
 
-•    Clojure, a functional Lisp dialect
-•    Groovy, a dynamic programming and scripting language
-•    JRuby, an implementation of Ruby
-•    Jython, an implementation of Python
-•    Kotlin, a statically-typed language from JetBrains, the developers of IntelliJ IDEA
-•    Scala, a statically-typed object-oriented and functional programming language
+-  Clojure, a functional Lisp dialect
+-  Groovy, a dynamic programming and scripting language
+-   JRuby, an implementation of Ruby
+-  Jython, an implementation of Python
+-  Kotlin, a statically-typed language from JetBrains, the developers of IntelliJ IDEA
+-  Scala, a statically-typed object-oriented and functional programming language
 
 **JVM** kendi içinde öbek (*heap*) ,yığın (*stack*) , metot bölümü ve program sayaçları(*register*) olan belleğe sahiptir. Byte kodlar birtakım işlemlerden-JIT ve Interpreted- sonra belleğe alınır ve makine(*Execute Engine*) tarafından çalıştırılır.
 
@@ -84,11 +83,11 @@ Bellek yönetimi programcıya bırakılmamıştır. Güçlü tip sistemine sahip
 
 -          **Java yüksek performanslıdır.**
 
-Java programcısı eğitimli ise Java kodu hızlıdır. Bununla birlikte Java çalışma zamanında performansı attırmak için derlenme zamanında kod optimizasyonu yapar. **Akın Hoca**'nın güzel ve bir o kadar yaralı makale serini [burdan]( <http://www.javaturk.org/java-yavas-mi-javanin-performansi-uzerine-i/>) okuyabilirsiniz.
+Java programcısı eğitimli ise Java kodu hızlıdır. Bununla birlikte Java çalışma zamanında performansı attırmak için derlenme zamanında kod optimizasyonu yapar. **Akın Hoca**'nın güzel ve bir o kadar yararlı makale serini [burdan]( <http://www.javaturk.org/java-yavas-mi-javanin-performansi-uzerine-i/>) okuyabilirsiniz.
 
 - **Java çok kanallı yapıyı (thread) ve Ağ programlamayı destekler.**
 - **Java 3 tane sürümü vardır.**
-  - Standart Java (Standard  Edition, SE), çekirdek dildir. En son 9. sürümü çıkmıştır.
+  - Standart Java (Standard  Edition, SE), çekirdek dildir. En son 11. sürümü çıkmıştır.
   - Mikro Java (Micro Edi5on, ME),  gömülü ve mobil ortamlar içindir. En son 8. sürümü çıkmıştır.
   - Kurumsal Java (Enterprise Edition, EE), kurumsal uygulamalar içindir. En son 8. sürümü çıkmıştır.
 -  **Java şartname temellidir.**

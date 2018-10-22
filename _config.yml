@@ -85,7 +85,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Muhammed K."
+  name             : "Muhammed K"
   avatar           : "/assets/images/profil.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Bilgisayar Mühendisi"
   location         : "Istanbul"
@@ -174,6 +174,7 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
+      
 # Sass/SCSS
 sass:
   sass_dir: _sass
