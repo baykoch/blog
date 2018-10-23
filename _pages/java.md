@@ -30,6 +30,7 @@ Dilim döndüğü, elimden geldiği kadar Java SE konularını burdan paylaşaca
 14.  [Java Paket ve Import Kavramları](https://baykoch.github.io/blog/java/java-package-import/): ***Package*** ve ***import*** anahtar kelimeleri.  Javada bulunan olağan (***core or pre-defined)*** paketler.
 15.  [Java Erişim Belirleyiciler](https://baykoch.github.io/blog/java/java-modifiers/): Üye değişkenlere, metotlara(***Public***, ***Protected***, ***Default***, ***Private*** ) ve sınıflara(***Public***, ***Default***) erişim belirleyiciler 
 16.  [Java Sahiplik ve Miras](https://baykoch.github.io/blog/java/java-inheritance/): Javada sahiplik(*Composite*) ve olma(*inheritance*) ilişkisi. ***Overriding***, ***Extends*** ve ***Super*** kavramları.
+17.  [Java Objects Metotları](https://baykoch.github.io/blog/java/java-object-class/): (Tamamlanmadı) Java Object sınıfının metotlarının incelenmesi (***toString***, ***hashCode***, ***equals*** ...)
 
 
 

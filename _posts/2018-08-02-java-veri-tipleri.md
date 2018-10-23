@@ -281,10 +281,10 @@ Yerel değişkenliği metotların içinde tanımlanan değişkenlerdir. İsimlen
   }
   ```
 
-- Bir değişken çağrıldığında, bulunduğu bloktan başlayarak üst kapsamlara doğru tarama yapar.
+- [Java başlama sırası](https://baykoch.github.io/blog/java/java-initializing/#ba%C5%9Flatma-s%C4%B1ras%C4%B1-initialization-order):
 
   ```java
-   private static int localOne = 4;      // 1.instance variable
+   private static int localOne = 4;      // 1.instance(sınıf değişkeni) variable
    
    public static void main(String[] args) {
        
@@ -292,7 +292,7 @@ Yerel değişkenliği metotların içinde tanımlanan değişkenlerdir. İsimlen
         int localOne = 7;
            
         if (localOne != 0) {
-             System.out.println(localOne); // 3. print = 10
+             System.out.println(localOne); // 3. print = 7
         }
         scopeOne();         // 4. `scopeOne` metodu cağrılıyor.
         scopeTwo(localOne); // 5. `scopeTwo` metoduna `localOne` değişkeni gönderiliyor.
@@ -303,29 +303,13 @@ Yerel değişkenliği metotların içinde tanımlanan değişkenlerdir. İsimlen
    }
    
    public static void scopeTwo (int localOne) {
-        System.out.println(localOne); // 7. print = 10
+        System.out.println(localOne); // 7. print = 7
    }    
   ```
 
-1. Bir sınıf değişkeni en üst kapsamda tanımlandı.
+  >4<br/>7<br/>4<br/>7
 
-2. Main blok içinde Java Derleyici `localOne ` değişkenini arar. Bu noktadan önce herhangi bir değişken tanımlanmadığı için üst değişkeni `4`  alır, konsola yazar.
 
-3. `İf` bloğu içinde `localOne ` aranır ve bulunamaz. Bir bir üst kapsam olan `Main`bloğunda arama yapılır; `10` bulunur, sonuç olarak konsola yazılır. Bir üst kapsamdaki `4` değeri kullanılmaz.
-
-4. `scopeOne` metodu çağrılıyor.
-
-5. `scopTwo` metodu çağrılıyor ve `main` metot tanımlanmış `10` değişkeni geçiriliyor.
-
-6. Herhangi bir değer geçilmediğinden bir üst seviyedeki  `localOne = 4` kullanılır.
-
-7. `Main` metodunda tanımlanan `10` değeri kullanılır.
-   ```java
-   4
-   10
-   4
-   10
-   ```
 
 ## Tip Çevrimleri (Type Conversion)
 

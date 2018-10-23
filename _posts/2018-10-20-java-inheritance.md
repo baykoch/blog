@@ -19,7 +19,7 @@ author_profile: True
 
 Bugün konumuz kaynaklarımız nasıl verimli kullanabiliriz ? Geri dönüşüm.
 
-Konumuz  geri dönüşüm olunca söyle bir fiyakalı giriş yapmak istedim. Yazılımda geri dönüşüm, yeniden kullanım demektir. Ayrıca yazılım dünyasında yeniden kullanım çok önemlidir. Çünkü her şeyi yeniden yazmak çok maliyetlidir, zaman alıcıdır. Mesela bir butunu düşünelim her kullandığınızda yeniden yazmaya kalksak?
+Konumuz  geri dönüşüm olunca söyle bir fiyakalı giriş yapmak istedim. Yazılımda geri dönüşüm, yeniden kullanım demektir. Ayrıca yazılım dünyasında yeniden kullanım çok önemlidir. Çünkü her şeyi yeniden yazmak çok maliyetlidir, zaman alıcıdır. Mesela bir botonu düşünelim her kullandığınızda yeniden yazmaya kalksak?
 
 Java yada nesneye dayalı programlama yeniden kullanım iki farklı şekilde sağlanır.
 
@@ -436,3 +436,50 @@ class Rectangle {
 ```
 
 Örnekte `super.calculateArea()` kullandığımız gibi tekrar eden kısımlardaki hizmeti ebeveyn sınıftaki metottan talep etmek ***kaliteli kod*** yazımı sağlar.
+
+#### Javada Çoklu Miras (Multiple *extends*)
+
+Java çoklu mirasa (*extends ile*) izin vermez. Yani bir sınıf aynı anda iki sınıfı birden miras (*extends edemez*) alamaz.
+
+```java
+// Çoklu mirasa izin verilmez.
+public class A extends B,C { // Hata!
+    
+}
+```
+
+Javada neden çoklu mirasa izin verilmediği açıklayalım:
+
+Eğer **B** ve **C** sınıfı bir D sınıfını miras almış olsun. **B** ve **C** sınıfların ikiside **D** sınıfın `call()` metodu ezdiğini(overriding) varsayalım. Bu durumda **A** metot hangi sınıfın (*B ve C*) `call()` metodunu çağıracağını bilemez.
+
+```java
+public class A extends B,C { // Hata!
+
+    public static void main(String[] args) {
+        A p = new A();
+        p.call(); // Hangi sınıftaki call metodu çağrılacak (B or C)?
+    }
+
+}
+class B extends D {
+
+    @Override
+    public void call() {
+        super.call();
+    }
+}
+class C extends D {
+
+    @Override
+    public void call() {
+        super.call();
+    }
+}
+class D {
+    public void call() {
+
+    }
+}
+```
+
+
