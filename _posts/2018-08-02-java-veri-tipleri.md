@@ -21,8 +21,8 @@ Java değişkenlerin tiplerinin belirtilmesi zorunludur. Yani Python diline munh
 ## Basit Veri Yapıları
 Basit tipler karmaşık olmayan `class and interface`’lerden türetilmeyen tiplerdir. Atomik yapıda, başka değişkenlerden türetilmemiştir. Bellek kullanımı  azdır. Array gibi yapılar ile birlikte kullanıldıklarında referans yani karmaşık tiplere göre daha hızlıdırlar. Sekiz adet olan basit tiplerin karmaşık tipleri vardır. Bunlara sarmalanmış yapılar olarak bilinir. Mesela sık kullanılan `**String**` tipi bir karmaşık tiptir. `String` `char` basit tipini üzerine inşa edilmiştir.
 
-**Not:**
-​    Karmaşık tiplerde değerin adresini tutarken, Basit tiplerde ve String tipinde değerin kendisini tutar.
+**Pratik Bilgi:**
+​    "Karmaşık tiplerde değerin adresini tutarken, basit tiplerde ve String tipinde değerin kendisini tutar" gibi düşünülebilir.
 {: .notice--info}
 
 ```java

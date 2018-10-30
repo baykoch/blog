@@ -1,5 +1,5 @@
 ---
-title: "Java Objects Metotları"
+title: "Java Object Sınıf Metotları"
 last_modified_at:
 categories:
   - java

@@ -314,60 +314,88 @@ public class Rectangle {
 
 - ***Sadece nesne metotları (non-static) ezilebilir. Sınıf metotları (static) ve üye değişkenleri ezilemez.***
 
-- Ebeveyn sınıftaki nesne değişkeni yeniden tanımlanırsa kendi yeni(ebeveyne sınıftan bağımsız) nesne değişkeni gibi davranır.
-
   ```java
   public class A extends B {
-   
-      // protected int id = 3;
-   
+  
       // Hata! static metotlar ezilemez(overriding).
       @Override
       public static void staticMethod() {
-          System.out.println("Static method");
-   
+          System.out.println("Static method in A");
       }
-      public static void main(String[] args) {
+  }
+  class B {
    
+      public static void staticMethod() {
+          System.out.println("Static method in B");
+      }
+  }
+  ```
+
+- Ebeveyn sınıftaki nesne değişkeni yeniden tanımlanırsa kendi yeni(ebeveyne sınıftan bağımsız) nesne değişkeni gibi davranır. Yani nesne değişkenleri `overriding` işlemine tabi olmadıkları için tanımlanabilir.
+
+  ```java
+  public class A extends B { 
+      //Nesne değişkenleri overriding işlemine tabi olmadıkları için tanımlanabilir.
+      // protected int id = 17; 
+      
+      public static void main(String[] args) {
               A p = new A();
-          // id yeniden tanımlarsak (3.satır)
-          // rs.id = 3 (kendi sınıfındaki id çağrılır)
-          // Aksi halde rs.id = 2 (ebeveyn sınıfındaki id çağrılır)
+          // Eğer 3.satırı (protected int id = 17) yorumu kaldırırsak 
+          // p.id = 17 (A sınıfındaki id çağrılır.)
+          // Aksi halde p.id = 7 (B sınıfındaki id çağrılır)
           System.out.println(p.id);
    
       }
   }
   class B {
-   
-      protected int id = 2;
-      // Statik metot
-      public static void staticMethod() {
-          System.out.println("Static method");
-   
-      }
+      protected int id = 7;
+  }
+  ```
+
+- Statik metodun alt-sınıflata yeniden tanımlanması ebeveny sınıfdaki metodu gölgeler(***shadowing***). 
+
+  ```java
+  public class A extends B {
+  	// Gölgeleyen statik metot
+  	public static void call() {
+  		System.out.println("Static method in A");
+  	}
+  
+  	public static void main(String[] args) {
+  		// 3. satıdaki call() metodunu silersek
+  		// Her iki durumdada B sınıınfaki call metodu çağrılaçaktır.
+  		// Aksi durumda A sınınfaki call() metodu B sınıfndakini gölgeler.
+  		// A.call() A sınıfındaki metodu
+  		// B.call() ise B sınıfdaki metodu çağırır.
+  		A.call();
+  		B.call();
+  
+  	}
+  }
+  
+  class B {
+  
+  	// Gölgelenmiş statik metot
+  	public static void call() {
+  		System.out.println("Static method in B");
+  
+  	}
   }
   ```
 
 - Ezme işleminde daha **kısıtlayıcı bir erişim niteleyici** tanımlanamaz. İşçi `work()` metoduna sahipse, çırak metodu ezip private yapamaz. Çünkü çıraktan devralan kalfa çalışması gerekir(`work()`) ama çırak kısıtladığı için çalışamaz ki buna anlamsız durumdur. Ters yönde *genişletici* **erişim niteleyici**  tanımlanabilir.
 
-- Nesne değişkenleri `overriding` işlemine tabi olmadıkları için tanımlanabilir.
-
   ```java
   public class A extends B {
-      //Nesne değişkenleri overriding işlemine tabi olmadıkları için tanımlanabilir.
-      private int id = 3;
-      // Hata! Ezme işleminde daha kısıtlayıcı bir erişim niteleyici tanımlanamaz
-      @Override
-      protected void call() { // Cannot reduce the visibility of the inherited method from B
-      }
-      public static void main(String[] args) {
-          A p = new A();
-      }
+  	// Hata! Ezme işleminde daha kısıtlayıcı bir erişim niteleyici tanımlanamaz
+  	@Override
+  	protected void call() { // Cannot reduce the visibility of the inherited method from B
+  	}
   }
+  
   class B {
-      protected int id = 2;
-      public void call() {
-      }
+  	public void call() {
+  	}
   }
   ```
 
@@ -437,7 +465,7 @@ class Rectangle {
 
 Örnekte `super.calculateArea()` kullandığımız gibi tekrar eden kısımlardaki hizmeti ebeveyn sınıftaki metottan talep etmek ***kaliteli kod*** yazımı sağlar.
 
-#### Javada Çoklu Miras (Multiple *extends*)
+### Javada Çoklu Miras (Multiple *extends*)
 
 Java çoklu mirasa (*extends ile*) izin vermez. Yani bir sınıf aynı anda iki sınıfı birden miras (*extends edemez*) alamaz.
 
