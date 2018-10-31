@@ -7,7 +7,7 @@ tags:
   - java  abstract class and method
   - java  soyut sınıf
   - java soyut metot
-toc: true
+toc: false
 toc_sticky: true
 toc_label: "Java Abstract"
 author_profile: True
@@ -27,7 +27,6 @@ Diğer bir nokta ise işçi sınıfında gerçekleştirilmiş([implementation](h
 - Soyut sınıfların her metodu soyut metot olmak zorunda değildir.
 - Soyut metotlar sadece `public` ve `protected` olabilir; `final`,  `private`, `static` ve`synchronized` olamazlar. Çünkü  `final` veya `private` gibi metotlar ezilemezler.  Soyut sınıf istisna olarak statik `main` metodu içerebilir.
 - Soyut sınıflar `final` olamaz. Çünkü `final` sınıflar devranılamaz.
-- Soyut sınıfların nesnesi üretilemediğinden kurucuya sahip olamaz.
 
 ```java
 public class Usta extends İşçi {
@@ -63,6 +62,31 @@ abstract class İşçi {
 }
 // Soyut sınıf final olamaz.
 // final abstract class İşçi {} // Hata!
+```
+
+- **Soyut sınıfların nesnesi üretilemesede kurucuya sahiptir. Normal sınıflar gibi akıllı kurucusu olabilir.**
+- Soyut sınıfların durumları olabilir. **Eğer `private` durumu sahipse `get` metoları bulunmak zoundadır. Çünkü nesnesi üretilemediğinden `get` metotları olmadan asla ulaşılamaz. Akıllı kurucu tanımlanırsa `set` metodu olmayabilir.**
+
+```java
+public class A extends B {
+
+	private int j;
+
+	public Usta(int i, int z, int j) {
+		super(i, z); // soyut sınıfın akıllı kurucu çağrısı
+		this.j = j;
+	}
+}
+abstract class B {
+	private int i;
+	private int z;
+    // private durumu sahip olan soyut sınıf ya akıllı kurucuya yada set metoduna sahip olmalıdır.
+	public B(int i, int z) {
+		super();
+		this.i = i;
+		this.z = z;
+	}
+}
 ```
 
 **Neden soyut sınıf kullanırız?**

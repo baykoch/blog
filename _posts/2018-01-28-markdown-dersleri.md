@@ -213,7 +213,7 @@ Markdown formatında tablo kullanmak biraz zahmetli.
 
 
 **Uyarılar:**
-​    Markdown formatı yerine HTML kullanılarak tablo oluşturulması  daha kolaydır.[HTML tablo oluşturucu](http://www.tablesgenerator.com/html_tables) kullanarak kolayca tablo oluşturabiliriz.
+[Markdown tablo oluşturucu](https://www.tablesgenerator.com/markdown_tables) kullanarak kolayca tablo oluşturabiliriz.
 {: .notice--info}
 
 ## Kod Blokları
@@ -312,7 +312,7 @@ Kırmızı renkli metin.{: #kırmızımetin}.
 
 ### Matematiksel İfadeler Ekleme
 
-MArkdown matematiksel ifadeler gosterme kabiliyeti var. Ama bunun için [MathJax](https://www.mathjax.org/) kütüphanesine ihtiyaç duyuyor. Aşağıdaki betik parçasını sayfamıza ekleyerek işe koyulalım.
+Markdown matematiksel ifadeler gosterme kabiliyeti var. Ama bunun için [MathJax](https://www.mathjax.org/) kütüphanesine ihtiyaç duyuyor. Aşağıdaki betik parçasını sayfamıza ekleyerek işe koyulalım.
 
 
 ```

@@ -15,7 +15,7 @@ toc_label: "Java Polymorphism"
 author_profile: True
 ---
 
-Çok şekillilik bir sınıfı birden fazla şekilde parametre veya cevap verecek şekilde kodlamasıdır. Yani bir sınıf farklı zamanlarda kendi veya alt tipleri (sub-class) göstermesidir. Miras(inheritance) ile çok şekillilik(polymorphism) iç içe geçmiştir. Overriding ve overloading çok şekliliğin bir parçasıdır. Bu konulardan [bahsedildi](https://baykoch.github.io/blog/java/java-inheritance/). Bu bölümden upcasting ve downcasting bahsedilecektir.
+Çok şekillilik bir sınıfı birden fazla şekilde parametreye cevap verecek şekilde kodlamasıdır. Yani bir sınıf farklı zamanlarda kendi veya alt tipleri (sub-class) göstermesidir. Miras(inheritance) ile çok şekillilik(polymorphism) iç içe geçmiştir. Overriding ve overloading çok şekliliğin bir parçasıdır. Bu konulardan [bahsedildi](https://baykoch.github.io/blog/java/java-inheritance/). Bu bölümden upcasting ve downcasting bahsedilecektir.
 
 `Upcasting` konusuna geçmeden önce Java bağlam(***binding***) konusuna bir bakış atalım.
 
