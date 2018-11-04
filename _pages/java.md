@@ -33,6 +33,7 @@ Dilim döndüğü, elimden geldiği kadar Java SE konularını burdan paylaşaca
 17. [Java Object Metotları](https://baykoch.github.io/blog/java/java-object-class/): (Tamamlanmadı) Java Object sınıfının metotlarının incelenmesi (***toString***, ***hashCode***, ***equals*** ...)
 18. [Java Çok Şekillilik (Polymorphism)](https://baykoch.github.io/blog/java/java-polymorphism/): ***Upcasting*** ve ***downcasting*** nedir, ne işe yarar?
 19. [Java Soyut Sınıf ve Metot Kavramı](https://baykoch.github.io/blog/java/java-abstract/): Soyut sınıf(***abstract class***) ve metot(***abstract method***) nedir, niçin kullanılır?
+20. [Java Arayüz(interface) Kavramı](https://baykoch.github.io/blog/java/java-interface/): Arayüzlerin(***interface***) özellikleri ve  üzerinde tanımlanabilecek metotlara(***default/private method***) göz atış
 
 
 
