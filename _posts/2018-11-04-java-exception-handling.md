@@ -374,7 +374,7 @@ Streams, connection gibi kaynaklar kullanıldığında bağlantıların kapatıl
 
 ### Finally
 
-​    Kullanımı zorunlu olmamakla birlikte, kullanıldığında bir kere çalıştırılacağı garanti edilen bloktur.
+Kullanımı zorunlu olmamakla birlikte, kullanıldığında bir kere çalıştırılacağı garanti edilen bloktur.
 
 - **Catch**’den sonra gelmek zorundadır.
 - Sıra dışı durum meydana gelip gelmesin bir kere kesin çalışır.
@@ -436,16 +436,16 @@ public class ExceptionDemo {
 
         } catch (IOException ex) {
             ex.printStackTrace();
-
         }
+        
     }
-
 }
 ```
 
 - `AutoCloseable` yerine getiren veya miras alan sınıf çağrıldığından bir kez `AutoCloseable` üzerindeki **close()** bir kez kesinlikle çalışır.
 
 - Yazılımcılar kaynak sınıflarını `AutoCloseable` yerine getirerek(*implements*) kendisi oluşturabilir.
+
 ```java
 public class ExceptionDemo {
 
@@ -459,10 +459,9 @@ public class ExceptionDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
     }
-
 }
-
 class AutoClose implements AutoCloseable {
     // close() her halükarda çalışacaktır.
     @Override
