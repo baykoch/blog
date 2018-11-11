@@ -206,7 +206,7 @@ Java 1.8 ile default metot, java 1.9 ile ise private metot kavramı arayüzlere 
 
 Elimizden geldiğince bu yapıları inceleyelim.
 
-#### A.Default and Private method in interface
+### A.Default and Private method in interface
 
 Değiştirilen/güncellenen eski kütüphane veya modül dosyaları  problemlere neden oluyordu. Java `binary compatibility` geriye doğru uyumluluk sistemi ile oluşabilecek hataları bir noktaya kadar çözebiliyordu.
 

@@ -10,9 +10,9 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "tr-TR"
-title                    : "Not Dünyam"
+title                    : "Heyhat"
 title_separator          : "-"
-name                     : "Muhammed K."
+name                     : "Muhammed K"
 description              : ""
 url                      : "https://baykoch.github.io"
 baseurl                  : "/blog" # the subpath of your site, e.g. "/blog"
@@ -85,7 +85,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Muhammed K"
+  name             : "Muhammed K."
   avatar           : "/assets/images/profil.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Bilgisayar Mühendisi"
   location         : "Istanbul"
