@@ -82,29 +82,31 @@ public class Person {
 
 ### hashCode()
 
-`hashCode()` metodu sınıfın 16-bitlik hash halini 10 sisteme çevirerek geri dönderir. Bu metot `HashMap` gibi bazı veri yapılarında çok kullanışlıdır.
+Hash girilen değeri bir dizi işlemden geçirerek eşsiz sayı üreten foksiyondur. hash foksiyonları genellikle bilgisayar biliminde hashtable veri yapılarında kullanılır. Hashtable hash fonksiyonu ile üretilen sayının denk geldiği indise eklenmesiyle oluşur. Hashtable en önemli özelliği elemanlara ulaşma süresinin  O(1) zamanda gerçekleşmesidir. Java yerleşik bulunan String, Interger , Double ... gibi sınıflar hashCode metotdu ezerek kendi davranışlarını tanımlamışlardır. String  için `s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]` fonkisyon değeri hesaplanır. 
+
+- Kullanıcı tarafında oluşturulan sınıflar hashCode metodunu ezerek(overriding) hash davranışını belirtmelidir.
+- Aşağıdaki kodda bazı değişkenlerin hash kodları (`int, boolean, String` ...) gösterilmiştir.
 
 ```java
-public class Person {
+public class HashDemo {
 
-    protected int id;
-    protected String name;
-    protected String surname;
-    protected int age;
-    
-    public Person(int id, String name, String surname, int age) {
-
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-    }
     public static void main(String[] args) {
 
-        Person pr = new Person(1, "Veli", "Durmuş", 37);
-        System.out.println(pr.toString()); // baykoch.inheritance.Person@7960847b
-        // HashCode nesne hash kodunu(16-bit) 10 sistemde verir.
-        System.out.println(pr.hashCode()); // 2036368507 (7960847b to 2036368507 )
+       // Boolean değerlerin hash kodu true için 1231 false için 1237'dir.
+		boolean b = true ;
+		boolean b2 = false;
+		Object t = b;  // Hash kodu almak için Object sınıfına cast edelim.
+		Object f = b2;
+		System.out.println( t.hashCode() ); // 1231
+		System.out.println(f.hashCode() ); // 1237
+		// int sayıların hash kodu kendisidir.
+		int i = 25;
+		Object intHash = i;
+		System.out.println( intHash.hashCode() ); // 25
+		// String değişknelerin hash kodu:
+		// s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1] foksiyonuna göre hesaplanır.
+		String s = "Türkiye";
+		System.out.println(s.hashCode()); // 269050420
 
     }
 }
