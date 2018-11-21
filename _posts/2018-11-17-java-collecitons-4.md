@@ -17,7 +17,7 @@ author_profile: True
 
 - Hashtable sınıfını miras alır. String anahtar değer çiftlerinden oluşur.
 
-**Yazılımda (hard code) kodun içine gömülmesi veya veri tabanında saklanması uygun olmayan sadece basit bir metin dosyasında tutulabilen; **
+**Yazılımda (hard code) kodun içine gömülmesi veya veri tabanında saklanması uygun olmayan sadece basit bir metin dosyasında tutulabilen;** 
 
 - *yazılımın arayüzü dil metinleri*
 
