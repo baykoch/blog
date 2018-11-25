@@ -69,6 +69,8 @@ Dilim döndüğü, elimden geldiği kadar Java SE konularını burdan paylaşaca
 
     -  [Java Collections Utility Sınıfı ve Dönüşümler ](https://baykoch.github.io/blog/java/java-collections-utility/): **Collections** sınıfında bulunan algoritmalar ve`collection to array, array to collection` dönüşümleri
 
+23. [Java Generics](https://baykoch.github.io/blog/java/java-generics/):  Jenerik nedir ve nasıl kullanılır. Jenerik yapılarda sınırlamalar ve belirsizlikler.
+
 
 
 
