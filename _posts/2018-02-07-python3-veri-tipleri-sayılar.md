@@ -200,8 +200,8 @@ print(result)
 ### Hex, Octal, Binary
 
 Hex,octal ve binary sayıları göstermek için aşağıda belirtilen notasyonları kullanılır.
-- Hex     : `0o`
-- Octal   : `0X`
+- Hex     : `0x`
+- Octal   : `0o`
 - Binary  : `0b`
 
 Örnek olarak `64` sayısının farklı sayı sistemlerinde kullanımı yazılmıştır.
