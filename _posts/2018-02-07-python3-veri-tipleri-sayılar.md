@@ -64,6 +64,9 @@ Python sayı tiplerine geçmeden önce dilin bazı karakterlere yükledikleri ma
 ### Integer
 
  Python `integer` (tam sayı) büyüklük bakımından herhangi bir kıstasa sahip değildir.Python koşulduğu cihazın bellekte bölgesine sığabilecek büyüklükte `integer` değeri tanımlanabilir. Integer değeri pozitif negatif veya sıfır değeri alabilir. Python `integer` değişkeni ile yapabileceklerimize göz atalım.
+
+- Python 3 ile birlikte `integer`  yerini `long` bırakmıştır.
+
 ```python
 x = 7
 y = 4

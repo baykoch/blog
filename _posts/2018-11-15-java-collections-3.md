@@ -52,7 +52,7 @@ List düzenli sıralı nesneler tutan yapılardır. Dizilerden en büyük farkı
 
 `List` arayüzünü temelde gecekleştirmesi(implements)  3 tane  sınıf vardır. **ArrayList**,**LinkedList** ve Vector. `Vector` miras alan Stack sınıfı bulunur. `Vector` eşzamanlı(synchronized) çalıştırdığı için performans problemine sahiptir. Kullanılabilirlik açısından pek fazla tercih edilmez. `Stack` yapısı her ne kadar list arayünü geçekeştirse yapısı itibariyle kendi özgü yapısı vardır. List üzerinde davranışlar kullanılmaz. İlerde kısaca Stack metotlarından bahsederiz.
 
-### ArrayList ve LinkedList Sınıfları
+## ArrayList ve LinkedList Sınıfları
 
 **Arraylist** dizi dinamik halidir. **LinkedList** bağlı(*double linked list*) listedir. Yani bir eleman sağındaki ve solundaki elemanı bilir. LinkedList kapasite kavramı muğlaktır. Başlangıç kapasitesi verilemez.
 

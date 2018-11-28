@@ -12,8 +12,6 @@ toc_label: "Java Data Type"
 author_profile: True
 ---
 
-Aslında bilgisayarın temel mantığı basittir. Elektrik devrelerindeki reaksiyonlara göre  var `1` yok `0` olarak belirlenir. Bu sıfır ve birler yana yana gelerek 8 bit yani bizim karakter diye adlandırdığımız sembolleri oluştururlar. Bu karakterler ilk zamanlar ASCII  adı altında tanımlanmıştı. Örneğin küçük harf `a` ikili sistemde ` b110 0001` ile ifade edilir. Bilimsel gelişmeler ile  bazı semboller,  ülkelerin doğal konuşma dillerine özgü harfler veya resmi para sembolleri bilgisayar dünyasına aktarılması ile ASCII ihtiyacı karşılayamaz hale gelmiştir. En son **unicode** -16 bit-  standart kodlama sistemi  geliştirmiştir.  Veri tipleri bu karakterleri kullanmak için kullanılan değerlerdir. Mesela **int**  -32 bit uzunluğunda- tam sayıları ifade edebilir.
-
 Java değişkenlerin tiplerinin belirtilmesi zorunludur. Yani Python diline munhasır şekilde bir değişken oluşturup, ilk başta sayı atayıp sonra metin atamayız. Java'da veri tipleri 3 başlık altında toplanır:
 
 {% include figure image_path="/assets/images/java-type.png" alt="data type" caption=""%}

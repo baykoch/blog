@@ -12,7 +12,7 @@ author_profile: True
 mathjax: true
 ---
 
-Programlama dillerinde kullanılması kaçınılmaz olan metinleri ifade etmek için kullanılırlar. Python `strings` hakkında bazı noktalara değinelim.
+ Python `strings` hakkında bazı noktalara değinelim.
 
 - Tek, çift veya 3'lü tırnaklar içinde gösterilebilirler.
     - Tek tırnak `'metin'` sembolik kısa ifadelerde kullanılması önerilir(dict keys, regular expressions, SQL vb).
@@ -21,7 +21,7 @@ Programlama dillerinde kullanılması kaçınılmaz olan metinleri ifade etmek i
       
        ```python
        # Tek tırnal sembolik kısa ifadelerde 
-       list1 = ['Fizik', 'Kimya', A, C];
+       list1 = ['Fizik', 'Kimya', A, C]
 
        # Çift tırnak uzun ve semblik olmayan kısa metinlerde 
        str = "Merhaba Dünya"
@@ -32,9 +32,20 @@ Programlama dillerinde kullanılması kaçınılmaz olan metinleri ifade etmek i
        ```
 
 - Python `char` tek bir karakteri ifade eden veri tipi bulunmaz, yani bütün metin ifadeler `string`'dir. 
+
 - Python `string` ilgili bir çok yararlı modül ve kütüphaneler yazılmıştır. Bu yüzden metinlerle ilgili bir çok problemlerin çözümünde sık tercih edilen programlama dilidir.
+
 - `string` dizilerin özelliklerine sahiptirler. İlk eleman 1 ile değil `0` başlar. Herhangi bir indisdeki karaktere veya bir kısmına ulaşılabilir.
-  
+
+- Sondan başa doğru indislere  -1 -2 ... girilerek ulaşılabilir. 
+
+    ```python
+    String     : p  y  t  h  o  n
+    İndis      : 0  1  2  3  4  5
+    Ters indis :-6 -5 -4 -3 -2 -1  
+    ```
+
+- İndisler tam sayı olmak zorundadır. Örnek hatalı kullanım: `str[1.5] ` 
 ```python
 str = "Merhaba Dünya"
 print("Örnek metin      :",str)         # str'ini değerinin 
@@ -50,26 +61,70 @@ print("str[:]           :",str[:])      # Metni kopyalamanın kısa yolu
 
 {% include figure image_path="/assets/images/python3-data-string.png" alt="Integer" caption=""%}
 
+- string değişkenler değişmez (immutable) nesnelerdir.  String üzerine yapılan birleştirme gibi işlemrin sonucunda yeni nense üretilir.
+
+```python
+str = "Hello" 
+tr[2] = 2  # Hata!
+str = str + " World"  # string değştirimedi yeni nensene oluşturuldu.
+```
+
+- `str` kurucusu kullanılarak diğer tiplerden string nesneleri üretilebilir. List,Tuple, Dictionary ve Set string cevirirklen herşeyi ile birlikte çevirir.
+
+```python
+from builtins import str
+from fractions import Fraction
+from _decimal import Decimal
+
+if __name__ == '__main__':
+   
+    i = 2						# from int
+    f = Fraction(2,3) 			# from Fraction (kesirli sayı)
+    c = 2 + 3j					# from complex (karmaşık sayı)	
+    dec = Decimal("0.7")    	# from Decimal (Ondalik sayı)
+    l = [2,3,"3"]				# from list
+    t = (2,3,5,6,"232")			# from tuple	
+    d = {1:"Adana",25:"Erzurum"}# from dictionary
+    s = {1,3,"Hi",5}			# from set
+   
+    text = str(i) # 2				
+    test = str(d) # Parantezler,virgüler vb. herşeyi olduğu gibi str cevirlir.
+    print(test)   #  {1: 'Adana', 25: 'Erzurum'}
+    # ...
+	pass
+```
+
+- Python tüm karakterler için unicode desteğine sahiptir. Lira simgesi için örnekler verelim.
+
+  - UTF-8 için `b` kullanılır. b'\xe2\x82\xba' = `₺`
+  - UTF-16 için `u` kullanılır. '\u20BA' = `₺`
+  - UTF-16 için `U` kullanılır. '\\U000020BA' = `₺`
+
+  ```
+  
+  ```
+
+
 ### Escape Characters
 
 Yorum satırları veya `print` gibi madulü içinde çift tırnak ile verilen bilgi amaçlı metinleri yorumlayıcı düz metin olarak kabul eder. Tam bu noktada işlevselliği artırmak için bazı karakterlere özel anlamlar yüklenir. Bu karakter kaçış yani `escape` karakter denir. Bu karakter bir çoğu aşağıdaki tabloda verilmiş, bir örnekle konu taçlandırılmıştır.
 
 
-| Escape Dizge | Anlamı                        | Notlar |
-|:-----------------:|--------------------------------|-------|
-| \newline        | Backslash                      | Yeni satır yok sayılır.      |
-| \\              | Backslash (\)                  | Slash gösterir.  |
-| \'              | Single quote (')               | Tek tırnak gösterir. |
-| \"              | Double quote (")               | Çift tırnak gösterir. |
-| \a              | ASCII Bell (BEL)               | Bip sesi verir.      |
-| \b              | ASCII Backspace (BS)           | İmleçi bir karakter geri alır. |
-| \f              | ASCII Formfeed (FF)            | Yeni satırda kaldığı yerden devam eder.|
-| \n              | ASCII Linefeed (LF)            | Yeni satırda en baştan devam eder.|
-| \r              | ASCII Carriage Return (CR)     | Satır başı yapar ve üzerine yazar. |
-| \t              | ASCII Horizontal Tab (TAB)     | Dikey Tab.     |
-| \v              | ASCII Vertical Tab (VT)        | Yatay Tab.      |
-| \ooo            | Character with octal value ooo | Octal karakterler       |
-| \xhh            | Character with hex value hh    | Hex karakterler      |
+| Anlamı                        | Escape Dizge | Notlar |
+|--------------------------------|:-----------------:|-------|
+| Backslash                      | \newline        | Yeni satır yok sayılır.      |
+| Backslash (\)                  | \\              | Slash gösterir.  |
+| Single quote (')               | \'              | Tek tırnak gösterir. |
+| Double quote (")               | \"              | Çift tırnak gösterir. |
+| ASCII Bell (BEL)               | \a              | Bip sesi verir.      |
+| ASCII Backspace (BS)           | \b              | İmleçi bir karakter geri alır. |
+| ASCII Formfeed (FF)            | \f              | Yeni satırda kaldığı yerden devam eder.|
+| ASCII Linefeed (LF)            | \n              | Yeni satırda en baştan devam eder.|
+| ASCII Carriage Return (CR)     | \r              | Satır başı yapar ve üzerine yazar. |
+| ASCII Horizontal Tab (TAB)     | \t              | Dikey Tab.     |
+| ASCII Vertical Tab (VT)        | \v              | Yatay Tab.      |
+| Character with octal value ooo | \ooo            | Octal karakterler       |
+| Character with hex value hh    | \xhh            | Hex karakterler      |
 
 
 ```python 
