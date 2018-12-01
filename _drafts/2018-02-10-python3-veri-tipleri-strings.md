@@ -78,54 +78,42 @@ from _decimal import Decimal
 
 if __name__ == '__main__':
    
-    i = 2						# from int
-    f = Fraction(2,3) 			# from Fraction (kesirli sayı)
-    c = 2 + 3j					# from complex (karmaşık sayı)	
-    dec = Decimal("0.7")    	# from Decimal (Ondalik sayı)
-    l = [2,3,"3"]				# from list
-    t = (2,3,5,6,"232")			# from tuple	
-    d = {1:"Adana",25:"Erzurum"}# from dictionary
-    s = {1,3,"Hi",5}			# from set
+    i = 2						#  int
+    f = Fraction(2,3) 			#  Fraction (kesirli sayı)
+    c = 2 + 3j					#  complex (karmaşık sayı)	
+    dec = Decimal("0.7")    	#  Decimal (Ondalik sayı)
+    l = [2,3,"3"]				#  list
+    t = (2,3,5,6,"232")			#  tuple	
+    d = {1:"Adana",25:"Erzurum"}#  dictionary
+    s = {1,3,"Hi",5}			#  set
    
-    text = str(i) # 2				
-    test = str(d) # Parantezler,virgüler vb. herşeyi olduğu gibi str cevirlir.
+    f_int = str(i)  # from int : 2				
+    f_dict = str(d) # from dict
+    # Parantezler,virgüler vb. herşeyi olduğu gibi str cevirlir.
     print(test)   #  {1: 'Adana', 25: 'Erzurum'}
     # ...
 	pass
 ```
 
-- Python tüm karakterler için unicode desteğine sahiptir. Lira simgesi için örnekler verelim.
-
-  - UTF-8 için `b` kullanılır. b'\xe2\x82\xba' = `₺`
-  - UTF-16 için `u` kullanılır. '\u20BA' = `₺`
-  - UTF-16 için `U` kullanılır. '\\U000020BA' = `₺`
-
-  ```
-  
-  ```
-
-
 ### Escape Characters
 
 Yorum satırları veya `print` gibi madulü içinde çift tırnak ile verilen bilgi amaçlı metinleri yorumlayıcı düz metin olarak kabul eder. Tam bu noktada işlevselliği artırmak için bazı karakterlere özel anlamlar yüklenir. Bu karakter kaçış yani `escape` karakter denir. Bu karakter bir çoğu aşağıdaki tabloda verilmiş, bir örnekle konu taçlandırılmıştır.
 
-
-| Anlamı                        | Escape Dizge | Notlar |
-|--------------------------------|:-----------------:|-------|
-| Backslash                      | \newline        | Yeni satır yok sayılır.      |
-| Backslash (\)                  | \\              | Slash gösterir.  |
-| Single quote (')               | \'              | Tek tırnak gösterir. |
-| Double quote (")               | \"              | Çift tırnak gösterir. |
-| ASCII Bell (BEL)               | \a              | Bip sesi verir.      |
-| ASCII Backspace (BS)           | \b              | İmleçi bir karakter geri alır. |
-| ASCII Formfeed (FF)            | \f              | Yeni satırda kaldığı yerden devam eder.|
-| ASCII Linefeed (LF)            | \n              | Yeni satırda en baştan devam eder.|
-| ASCII Carriage Return (CR)     | \r              | Satır başı yapar ve üzerine yazar. |
-| ASCII Horizontal Tab (TAB)     | \t              | Dikey Tab.     |
-| ASCII Vertical Tab (VT)        | \v              | Yatay Tab.      |
-| Character with octal value ooo | \ooo            | Octal karakterler       |
-| Character with hex value hh    | \xhh            | Hex karakterler      |
-
+| Anlamı                         | Escape Dizge | Notlar                                  |
+| ------------------------------ | :----------: | --------------------------------------- |
+| Backslash                      |   \newline   | Yeni satır yok sayılır.                 |
+| Backslash (\)                  |      \\      | Slash gösterir.                         |
+| Single quote (')               |      \'      | Tek tırnak gösterir.                    |
+| Double quote (")               |      \"      | Çift tırnak gösterir.                   |
+| ASCII Bell (BEL)               |      \a      | Bip sesi verir.                         |
+| ASCII Backspace (BS)           |      \b      | İmleçi bir karakter geri alır.          |
+| ASCII Formfeed (FF)            |      \f      | Yeni satırda kaldığı yerden devam eder. |
+| ASCII Linefeed (LF)            |      \n      | Yeni satırda en baştan devam eder.      |
+| ASCII Carriage Return (CR)     |      \r      | Satır başı yapar ve üzerine yazar.      |
+| ASCII Horizontal Tab (TAB)     |      \t      | Dikey Tab.                              |
+| ASCII Vertical Tab (VT)        |      \v      | Yatay Tab.                              |
+| Character with octal value ooo |     \ooo     | Octal karakterler                       |
+| Character with hex value hh    |     \xhh     | Hex karakterler                         |
 
 ```python 
 print("1.Merhaba\
@@ -145,6 +133,7 @@ print("12.\115\145\162\150\141\142\141\104\374\156\171\141")
 # MerhabaDünya hex sistemede yazılımı
 print("13.\x4d\x65\x72\x68\x61\x62\x61\x44\xfc\x6e\x79\x61") 
 ```
+
 {% include figure image_path="/assets/images/python3-data-escape.png" alt="Integer" caption=""%}
 
 ### Escape Karakteri Yok Sayma
@@ -159,13 +148,102 @@ path_escape = r'C:\new\testdb.db'   # Dosya yolu r parametresiyle kullanım.
 print("Hatalı Kullanım : ",path_no_escape)
 print("Doğru Kullanım  : ",path_escape)
 ```
+
 {% include figure image_path="/assets/images/python3-data-raw-escape.png" alt="Integer" caption=""%}
 
-### String Conversion Tool
+### Unicode
+
+Konun iyi anlaşılması için lutfen [burdan](https://baykoch.github.io/blog/genel/unicode/) unicode,utf, ascii gibi kavramlar ne anlama geliyor bir göz atın.
+
+Unicode kunusunda Python 2 ve 3 arasında fark olduğunu belirteyim. Python 2 bahseilmeyecek.
+
+- byte olduğunu belirtmek için tırnaklardan önce `b` harfi kullanılır.
+
+```python
+byt = b'\xe2\x82\xba' # utf8 göre kodlanmış bayt gösterimi
+print(byt.decode("utf8")) # bayt kodun çözümü: ₺
+```
+
+- Kodlama işlemeleri için `encode` ve `decode` foksiyonları kullanılır. 
+
+```python
+ print("₺".encode("utf8"))  # b'\xe2\x82\xba'
+ print(b'\xe2\x82\xba'.decode("utf8")) # ₺
+```
+
+- Kodlama biçimi temsil edilmiyorsa hata verecektir. Ascii olmayan bir karakter kodlamaya çalışalım. `ü` karakteri ascii bulunmaz.
+
+```python
+byt = "ü".encode("ascii") #  'ascii' codec can't encode character
+```
+
+- Temsil edilmeyen durumları ele almak için `error` parametresi kullanılır. 
+
+| Parametre           | Anlamı                                                       |
+| ------------------- | ------------------------------------------------------------ |
+| ‘strict’            | Karakter temsil edilemiyorsa hata verilir.                   |
+| ‘ignore’            | Temsil edilemeyen karakter görmezden gelinir.                |
+| ‘replace’           | Temsil edilemeyen karakterin yerine bir ‘?’ işareti koyulur. |
+| ‘xmlcharrefreplace’ | Temsil edilemeyen karakter yerine XML karşılığı koyulur.     |
+
+```python
+ignore = "aü".encode("ascii", errors="ignore") # b'a'
+replace = "aü".encode("ascii", errors="replace") # b'a?'
+xml = "aü".encode("ascii", errors="xmlcharrefreplace") # b'a&#252;'
+```
+
+`strict` modu ile varsayılan boş mod aynı anlama gelir.
+
+```mathematica
+"aü".encode("ascii", errors="strict") = "aü".encode("ascii")
+```
+
+- Dosya okuma yazma işmelerinde unicode yeniden değinilecetir.
+
+UTF-16 ve UTF-32 çevirme.
+
+```python
+lira_Utf16 = "₺".encode("utf16") # b'\xff\xfe\xba '
+lira_Utf32 = "₺".encode("utf32") # b'\xff\xfe\x00\x00\xba \x00\x00'
+    
+dec_utf16 = lira_Utf16.decode("utf16") # ₺
+dec_utf32 = lira_Utf32.decode("utf16") # ₺
+```
+
+Hard kod biçimden UTF-16 için `\u` ve UTF-32 için`\U` kullanılabilir.
+
+```python
+lira_Utf16 = "\u20BA"
+lira_Utf32 = "\U000020BA"
+print(lira_Utf16) # ₺
+print(lira_Utf32) # ₺
+```
 
 ### String Formatting
 
-### String Fonksiyon ve Methodlar
+format str nesneleri için çok yünlü biçilendirme foksioynudur. Biçimlendirme süslü parntezler`{}` arasınada belirtilitr. Süslü parnteler arasında biçimlernirme 3 faklı şeklide varsayılan, sırayı belitme veya anahtar  kelime kullnılarak yapılabilir. 
+
+```python
+if __name__ == '__main__':
+   
+    # varsayılan boş 
+    default_order = "{}, {} and {}".format('İncir','Kivi','Muz')
+    print(default_order) # İncir, Kivi and Muz
+
+    # Sırayı bildirme
+    positional_order = "{1}, {0} and {2}".format('İncir,','Kivi','Muz')
+    print(positional_order) # Kivi, İncir, and Muz
+
+    # Anahtar kelime kullanark
+    keyword_order = "{s}, {b} and {j}".format(j='İncir',b='Kivi',s='Muz')
+    print(keyword_order) # Muz, Kivi and İncir
+   
+    pass
+```
+
+
+
+### String Fonksiyon
 
 ## Lists
 

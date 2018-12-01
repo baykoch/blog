@@ -113,12 +113,12 @@ public class Calculator {
 }
 ```
 
-Eğer izah edemediysem ;
+Özetle:
 
-1. Basit tipler değerleri  geçilir.
-2. Karmaşık tipler ise referansları geçilir. (Aslında doğru ifade değil)
+1. Basit tiplerin değerleri  geçilir.
+2. Karmaşık tiplerin ise referanslar değerleri geçilir.
 
-  Karmaşık tiplerin referans değerleri metotlara geçildiğinden  metot içinde yapılan işlemler asıl veriyi değiştirdiğinden bahsettik(Diziler de karmaşık tiptir!). Ama maalesef  String karmaşık veri tipi için bundan bahsedemeyiz.
+  Karmaşık tiplerin referans değerleri metotlara geçildiğinden  metot içinde yapılan işlemler asıl veriyi değiştirdiğinden bahsettik(Diziler de karmaşık tiptir!). Ama maalesef  `String` karmaşık veri tipi için bundan bahsedemeyiz.
 
 ```java
 public class CallByValue {

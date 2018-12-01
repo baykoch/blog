@@ -89,9 +89,11 @@ print ("Aşağı Yuvarlama : ", result)
 
 {% include figure image_path="/assets/images/python3-data-integer.png" alt="Integer" caption=""%}
 
-
-
-
+- Okunuşu kolaylaştırmak tam sayıların  aralarında alt-tire kullanılır. 
+```python
+value = 1_999_999_999_999_999_999
+print(value) # 1999999999999999999
+```
 ### Booleans
 
 Mantıksal veri tipleridir.Önermelerin gerçekleşebilmesi bilmesi veya durumları kontrol ermek için kullanılır. `True` ve `False`  olmak üzere 2 değerine  sahiptir. Aslında burda `True` 1 değerine `False`  0 değerine  eşittir.
