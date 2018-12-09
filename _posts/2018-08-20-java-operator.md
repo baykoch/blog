@@ -407,11 +407,11 @@ Aşağıdaki kod parçaları her ne kadar mantıklı olmasa da öğrenmek ve ör
 public static void main(String[] args) {
     int y = 16;
     int x;
-    x = ( y++ / operatör.numberOne() << 1 + 2 == --y  ) ? 47 : 53;
+    x = ( y++ / numberOne() << 1 + 2 == --y  ) ? 47 : 53;
     System.out.println(x);    
 }
 
-public  int numberOne() {
+public static int numberOne() {
     return 8;
 }
 ```
@@ -435,14 +435,14 @@ Diğer bir örnek.
 public static void main(String[] args) {
     int y = 3;
     int x = 2;
-    int result = operatör.add(++x , x, y = 4 , y++); //add (3,3,4,4) geçilir. Add İşlemden sonra y değeri bir attırılır.
+    int result = add(++x , x, y = 4 , y++); //add (3,3,4,4) geçilir. Add İşlemden sonra y değeri bir attırılır.
     System.out.println("x + y + z + w =" + result);  // 14
     System.out.println("x = " + x);                  // 3
     System.out.println("y = " + y);                  // 5
 
 }
 
-public int add(int x, int y, int z, int w) {
+public static int add(int x, int y, int z, int w) {
     return x + y + z + w;
 
 }
