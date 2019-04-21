@@ -15,13 +15,9 @@ toc_label: "Java "
 author_profile: True
 ---
 
-> Dünya evet bizim yani ademoğlunun mahvettiği dünya... İhtiyac,ihtiras ve daha ötesi, sahip olma dürtüsü… Bitmeyen arzu ve istek… Hep ben ve ben diyerek varılmış,kurulmus yeni düzen: Sürekli tüketen insanların düzeni.
 
-Bugün konumuz kaynaklarımız nasıl verimli kullanabiliriz ? Geri dönüşüm.
 
-Konumuz  geri dönüşüm olunca söyle bir fiyakalı giriş yapmak istedim. Yazılımda geri dönüşüm, yeniden kullanım demektir. Ayrıca yazılım dünyasında yeniden kullanım çok önemlidir. Çünkü her şeyi yeniden yazmak çok maliyetlidir, zaman alıcıdır. Mesela bir botonu düşünelim her kullandığınızda yeniden yazmaya kalksak?
-
-Java yada nesneye dayalı programlama yeniden kullanım iki farklı şekilde sağlanır.
+Java'da  yeniden kullanım iki farklı şekilde sağlanır.
 
 1. Var olan sınıflardan yararlanarak birleşik sınıflar oluşturma: Sahiplik ilişkisi (*has-a /composite*)
 
